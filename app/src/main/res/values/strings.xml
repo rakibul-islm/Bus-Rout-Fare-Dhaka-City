@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Bus Fare - Dhaka City</string>
+
+    <string-array name="distance_name">
+        <item>Chittagong Road</item>
+        <item>Sign Board</item>
+        <item>Matuail</item>
+        <item>Rayerbag</item>
+        <item>Jatrabari</item>
+        <item>Sayedabad</item>
+        <item>Gulistan</item>
+        <item>GPO</item>
+        <item>Paltan</item>
+        <item>Press Club</item>
+        <item>High Cour</item>
+        <item>Shahbag</item>
+        <item>Bata Signal</item>
+        <item>Science Lab</item>
+        <item>City College</item>
+        <item>Jigatola</item>
+        <item>Dhanmondi 15</item>
+        <item>Star Kabab</item>
+        <item>Shankar</item>
+        <item>Mohammadpur</item>
+        <item>Bosila</item>
+        <item>Washpur</item>
+        <item>Arshinagar</item>
+        <item>Ghatar Char</item>
+
+    </string-array>
+
+
+
+
+</resources>
