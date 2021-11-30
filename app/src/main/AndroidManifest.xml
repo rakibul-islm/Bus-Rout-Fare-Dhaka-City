@@ -10,12 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BusFareDhakaCity">
         <activity
+            android:name=".BusRoutActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".Welcome_Screen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

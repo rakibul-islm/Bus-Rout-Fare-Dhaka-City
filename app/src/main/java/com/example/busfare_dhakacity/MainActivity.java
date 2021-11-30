@@ -2,10 +2,12 @@ package com.example.busfare_dhakacity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         searchButton.setOnClickListener(this);
 
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, busDistanceName);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, busDistanceName);
         fromautoCompleteTextView.setThreshold(1);
         toautoCompleteTextView.setThreshold(1);
 
@@ -60,8 +62,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-        ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, allBuses());
+        ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, allBuses());
         listView.setAdapter(mHistory);
+
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(view.getContext(),BusRoutActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -81,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         List<String> busList = bus(from, to);
-        ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, busList);
+        ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, busList);
         listView.setAdapter(mHistory);
 
 
