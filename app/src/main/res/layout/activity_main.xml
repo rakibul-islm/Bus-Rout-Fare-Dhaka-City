@@ -126,16 +126,18 @@
 
 
         <GridLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:columnCount="2"
             android:padding="5dp"
             android:useDefaultMargins="true">
 
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_width="360dp"
-                android:layout_height="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:backgroundTint="#EAE9E9"
                 app:strokeColor="#3E4744"
                 app:strokeWidth="2dp">
@@ -152,7 +154,6 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:orientation="horizontal">
-
 
 
                         <TextView
@@ -205,12 +206,6 @@
             </com.google.android.material.card.MaterialCardView>
 
 
-
-
-
-
-
-
         </GridLayout>
 
 
@@ -233,17 +228,35 @@
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+            <Button
                 android:layout_weight="1"
-                android:padding="5dp"
-                android:textColor="#3E4744"
-                android:text="Bus List"
-                android:layout_marginLeft="20dp"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Buss List"
+                android:selectAllOnFocus="false"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textColor="#3E4744"
+                android:backgroundTint="#B07C8C87"
+                android:shadowRadius="@integer/material_motion_duration_long_1"
+                />
+
+            <Button
+                android:layout_marginRight="10dp"
+                android:textAllCaps="false"
+                android:id="@+id/allBusId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="All Buss"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#3E4744"
+                android:backgroundTint="#B07C8C87"
+                android:shadowRadius="@integer/material_motion_duration_long_1"
+                />
 
 
 

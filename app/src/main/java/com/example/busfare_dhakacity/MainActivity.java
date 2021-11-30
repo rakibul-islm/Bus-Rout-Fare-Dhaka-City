@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextInputLayout textInputLayout1, textInputLayout2;
     private TextView searchTextView, distanceView, busFareView;
     private ListView listView;
-    private Button searchButton;
+    private Button searchButton, allBusButton;
     private String[] busDistanceName;
     String from, to;
 
@@ -49,8 +49,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         listView = findViewById(R.id.listViewId);
 
         searchButton = findViewById(R.id.buttonId);
+        allBusButton = findViewById(R.id.allBusId);
 
         searchButton.setOnClickListener(this);
+        allBusButton.setOnClickListener(this);
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, busDistanceName);
@@ -74,37 +76,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
         });
+
     }
 
 
     @Override
     public void onClick(View v) {
 
-        from = textInputLayout1.getEditText().getText().toString();
-        to = textInputLayout2.getEditText().getText().toString();
-        String searchText = from + " - " + to;
-        searchTextView.setText(searchText);
+        if(v.getId()==R.id.buttonId) {
 
-        String distance = dis(from, to);
-        distanceView.setText("Distance: " + distance + " KM");
+            from = textInputLayout1.getEditText().getText().toString();
+            to = textInputLayout2.getEditText().getText().toString();
+            String searchText = from + " - " + to;
+            searchTextView.setText(searchText);
 
-        int busFare = busRent(from, to);
-        busFareView.setText("Bus Fare: " + busFare + " TK");
+            String distance = dis(from, to);
+            distanceView.setText("Distance: " + distance + " KM");
 
-
-        List<String> busList = bus(from, to);
-        ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, busList);
-        listView.setAdapter(mHistory);
+            int busFare = busRent(from, to);
+            busFareView.setText("Bus Fare: " + busFare + " TK");
 
 
-        try {
-            InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-        } catch (Exception e) {
-            // TODO: handle exception
+            List<String> busList = bus(from, to);
+            ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, busList);
+            listView.setAdapter(mHistory);
+
+
+            try {
+                InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+
+            Toast.makeText(getApplicationContext(), searchText, Toast.LENGTH_SHORT).show();
         }
 
-        Toast.makeText(getApplicationContext(), searchText, Toast.LENGTH_SHORT).show();
+        if(v.getId()==R.id.allBusId) {
+            ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, allBuses());
+            listView.setAdapter(mHistory);
+            searchTextView.setText("");
+            distanceView.setText("");
+            busFareView.setText("");
+        }
 
     }
 
