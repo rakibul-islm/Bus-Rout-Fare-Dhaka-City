@@ -231,15 +231,17 @@
             <Button
                 android:layout_weight="1"
                 android:textAllCaps="false"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Buss List"
+                android:text="Bus List"
                 android:selectAllOnFocus="false"
                 android:textAlignment="textStart"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="#3E4744"
-                android:backgroundTint="#B07C8C87"
+                android:outlineAmbientShadowColor="@android:color/transparent"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
                 android:shadowRadius="@integer/material_motion_duration_long_1"
                 />
 
@@ -249,12 +251,14 @@
                 android:id="@+id/allBusId"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="All Buss"
+                android:text="All Bus"
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="#3E4744"
-                android:backgroundTint="#B07C8C87"
+                android:outlineAmbientShadowColor="@android:color/transparent"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
                 android:shadowRadius="@integer/material_motion_duration_long_1"
                 />
 
