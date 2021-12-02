@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String[] busDistanceName;
     String from, to;
     String[] bus;
+    List<String> busList = null;
 
 
     @Override
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             busFareView.setText("Bus Fare: " + busFare + " TK");
 
 
-            List<String> busList = bus(from, to);
+            busList = bus(from, to);
             ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, busList);
             listView.setAdapter(mHistory);
 
@@ -219,161 +220,168 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    public static int busRent(String a, String b) {
+    public int busRent(String a, String b) {
         double from = 0.0;
         double to = 0.0;
         double distance;
-        if ("Chittagong Road".equalsIgnoreCase(a)) {
-            from = 0.0;
-        }
-        if ("Sign Board".equalsIgnoreCase(a)) {
-            from = 2.9;
-        }
-        if ("Matuail".equalsIgnoreCase(a)) {
-            from = 4.4;
-        }
-        if ("Rayerbag".equalsIgnoreCase(a)) {
-            from = 5.5;
-        }
-        if ("Shonir Akhra".equalsIgnoreCase(a)) {
-            from = 6.3;
-        }
-        if ("Jatrabari".equalsIgnoreCase(a)) {
-            from = 8.1;
-        }
-        if ("Sayedabad".equalsIgnoreCase(a)) {
-            from = 9.3;
-        }
-        if ("Gulistan".equalsIgnoreCase(a)) {
-            from = 11.2;
-        }
-        if ("GPO".equalsIgnoreCase(a)) {
-            from = 11.9;
-        }
-        if ("Paltan".equalsIgnoreCase(a)) {
-            from = 12.2;
-        }
-        if ("Press Club".equalsIgnoreCase(a)) {
-            from = 12.2;
-        }
-        if ("High Court".equalsIgnoreCase(a)) {
-            from = 13.1;
-        }
-        if ("Shahbag".equalsIgnoreCase(a)) {
-            from = 14.0;
-        }
-        if ("Bata Signal".equalsIgnoreCase(a)) {
-            from = 14.6;
-        }
-        if ("Science Lab".equalsIgnoreCase(a)) {
-            from = 15.2;
-        }
-        if ("City College".equalsIgnoreCase(a)) {
-            from = 15.5;
-        }
-        if ("Jigatola".equalsIgnoreCase(a)) {
-            from = 16.4;
-        }
-        if ("Dhanmondi 15".equalsIgnoreCase(a)) {
-            from = 17.0;
-        }
-        if ("Star Kabab".equalsIgnoreCase(a)) {
-            from = 17.4;
-        }
-        if ("Shankar".equalsIgnoreCase(a)) {
-            from = 17.9;
-        }
-        if ("Mohammadpur".equalsIgnoreCase(a)) {
-            from = 19.0;
-        }
-        if ("Bosila".equalsIgnoreCase(a)) {
-            from = 21.7;
-        }
-        if ("Washpur".equalsIgnoreCase(a)) {
-            from = 23.6;
-        }
-        if ("Arshinagar".equalsIgnoreCase(a)) {
-            from = 24.1;
-        }
-        if ("Ghatar Char".equalsIgnoreCase(a)) {
-            from = 26.0;
+        for (int i = 0; i < busList.size(); i++) {
+            //bus
+            if (busList.get(i).equalsIgnoreCase("Rojonigondha")) {
+                if ("Chittagong Road".equalsIgnoreCase(a)) {
+                    from = 0.0;
+                }
+                if ("Sign Board".equalsIgnoreCase(a)) {
+                    from = 2.9;
+                }
+                if ("Matuail".equalsIgnoreCase(a)) {
+                    from = 4.4;
+                }
+                if ("Rayerbag".equalsIgnoreCase(a)) {
+                    from = 5.5;
+                }
+                if ("Shonir Akhra".equalsIgnoreCase(a)) {
+                    from = 6.3;
+                }
+                if ("Jatrabari".equalsIgnoreCase(a)) {
+                    from = 8.1;
+                }
+                if ("Sayedabad".equalsIgnoreCase(a)) {
+                    from = 9.3;
+                }
+                if ("Gulistan".equalsIgnoreCase(a)) {
+                    from = 11.2;
+                }
+                if ("GPO".equalsIgnoreCase(a)) {
+                    from = 11.9;
+                }
+                if ("Paltan".equalsIgnoreCase(a)) {
+                    from = 12.2;
+                }
+                if ("Press Club".equalsIgnoreCase(a)) {
+                    from = 12.2;
+                }
+                if ("High Court".equalsIgnoreCase(a)) {
+                    from = 13.1;
+                }
+                if ("Shahbag".equalsIgnoreCase(a)) {
+                    from = 14.0;
+                }
+                if ("Bata Signal".equalsIgnoreCase(a)) {
+                    from = 14.6;
+                }
+                if ("Science Lab".equalsIgnoreCase(a)) {
+                    from = 15.2;
+                }
+                if ("City College".equalsIgnoreCase(a)) {
+                    from = 15.5;
+                }
+                if ("Jigatola".equalsIgnoreCase(a)) {
+                    from = 16.4;
+                }
+                if ("Dhanmondi 15".equalsIgnoreCase(a)) {
+                    from = 17.0;
+                }
+                if ("Star Kabab".equalsIgnoreCase(a)) {
+                    from = 17.4;
+                }
+                if ("Shankar".equalsIgnoreCase(a)) {
+                    from = 17.9;
+                }
+                if ("Mohammadpur".equalsIgnoreCase(a)) {
+                    from = 19.0;
+                }
+                if ("Bosila".equalsIgnoreCase(a)) {
+                    from = 21.7;
+                }
+                if ("Washpur".equalsIgnoreCase(a)) {
+                    from = 23.6;
+                }
+                if ("Arshinagar".equalsIgnoreCase(a)) {
+                    from = 24.1;
+                }
+                if ("Ghatar Char".equalsIgnoreCase(a)) {
+                    from = 26.0;
+                }
+
+                if ("Chittagong Road".equalsIgnoreCase(b)) {
+                    to = 0.0;
+                }
+                if ("Sign Board".equalsIgnoreCase(b)) {
+                    to = 2.9;
+                }
+                if ("Matuail".equalsIgnoreCase(b)) {
+                    to = 4.4;
+                }
+                if ("Rayerbag".equalsIgnoreCase(b)) {
+                    to = 5.5;
+                }
+                if ("Shonir Akhra".equalsIgnoreCase(b)) {
+                    to = 6.3;
+                }
+                if ("Jatrabari".equalsIgnoreCase(b)) {
+                    to = 8.1;
+                }
+                if ("Sayedabad".equalsIgnoreCase(b)) {
+                    to = 9.3;
+                }
+                if ("Gulistan".equalsIgnoreCase(b)) {
+                    to = 11.2;
+                }
+                if ("GPO".equalsIgnoreCase(b)) {
+                    to = 11.9;
+                }
+                if ("Paltan".equalsIgnoreCase(b)) {
+                    to = 12.2;
+                }
+                if ("Press Club".equalsIgnoreCase(b)) {
+                    to = 12.2;
+                }
+                if ("High Court".equalsIgnoreCase(b)) {
+                    to = 13.1;
+                }
+                if ("Shahbag".equalsIgnoreCase(b)) {
+                    to = 14.0;
+                }
+                if ("Bata Signal".equalsIgnoreCase(b)) {
+                    to = 14.6;
+                }
+                if ("Science Lab".equalsIgnoreCase(b)) {
+                    to = 15.2;
+                }
+                if ("City College".equalsIgnoreCase(b)) {
+                    to = 15.5;
+                }
+                if ("Jigatola".equalsIgnoreCase(b)) {
+                    to = 16.4;
+                }
+                if ("Dhanmondi 15".equalsIgnoreCase(b)) {
+                    to = 17.0;
+                }
+                if ("Star Kabab".equalsIgnoreCase(b)) {
+                    to = 17.4;
+                }
+                if ("Shankar".equalsIgnoreCase(b)) {
+                    to = 17.9;
+                }
+                if ("Mohammadpur".equalsIgnoreCase(b)) {
+                    to = 19.0;
+                }
+                if ("Bosila".equalsIgnoreCase(b)) {
+                    to = 21.7;
+                }
+                if ("Washpur".equalsIgnoreCase(b)) {
+                    to = 23.6;
+                }
+                if ("Arshinagar".equalsIgnoreCase(b)) {
+                    to = 24.1;
+                }
+                if ("Ghatar Char".equalsIgnoreCase(b)) {
+                    to = 26.0;
+                }
+            }
+            //bus
         }
 
-        if ("Chittagong Road".equalsIgnoreCase(b)) {
-            to = 0.0;
-        }
-        if ("Sign Board".equalsIgnoreCase(b)) {
-            to = 2.9;
-        }
-        if ("Matuail".equalsIgnoreCase(b)) {
-            to = 4.4;
-        }
-        if ("Rayerbag".equalsIgnoreCase(b)) {
-            to = 5.5;
-        }
-        if ("Shonir Akhra".equalsIgnoreCase(b)) {
-            to = 6.3;
-        }
-        if ("Jatrabari".equalsIgnoreCase(b)) {
-            to = 8.1;
-        }
-        if ("Sayedabad".equalsIgnoreCase(b)) {
-            to = 9.3;
-        }
-        if ("Gulistan".equalsIgnoreCase(b)) {
-            to = 11.2;
-        }
-        if ("GPO".equalsIgnoreCase(b)) {
-            to = 11.9;
-        }
-        if ("Paltan".equalsIgnoreCase(b)) {
-            to = 12.2;
-        }
-        if ("Press Club".equalsIgnoreCase(b)) {
-            to = 12.2;
-        }
-        if ("High Court".equalsIgnoreCase(b)) {
-            to = 13.1;
-        }
-        if ("Shahbag".equalsIgnoreCase(b)) {
-            to = 14.0;
-        }
-        if ("Bata Signal".equalsIgnoreCase(b)) {
-            to = 14.6;
-        }
-        if ("Science Lab".equalsIgnoreCase(b)) {
-            to = 15.2;
-        }
-        if ("City College".equalsIgnoreCase(b)) {
-            to = 15.5;
-        }
-        if ("Jigatola".equalsIgnoreCase(b)) {
-            to = 16.4;
-        }
-        if ("Dhanmondi 15".equalsIgnoreCase(b)) {
-            to = 17.0;
-        }
-        if ("Star Kabab".equalsIgnoreCase(b)) {
-            to = 17.4;
-        }
-        if ("Shankar".equalsIgnoreCase(b)) {
-            to = 17.9;
-        }
-        if ("Mohammadpur".equalsIgnoreCase(b)) {
-            to = 19.0;
-        }
-        if ("Bosila".equalsIgnoreCase(b)) {
-            to = 21.7;
-        }
-        if ("Washpur".equalsIgnoreCase(b)) {
-            to = 23.6;
-        }
-        if ("Arshinagar".equalsIgnoreCase(b)) {
-            to = 24.1;
-        }
-        if ("Ghatar Char".equalsIgnoreCase(b)) {
-            to = 26.0;
-        }
 
         int rent;
 
@@ -386,6 +394,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rent = (int) Math.round(distance * 2.15);
         if (rent < 10) {
             rent = 10;
+        }
+        if (distance == 0.0) {
+            rent = 0;
         }
         return rent;
     }
