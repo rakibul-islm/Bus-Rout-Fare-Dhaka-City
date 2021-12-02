@@ -72,7 +72,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selectedFromList = (String) (listView.getItemAtPosition(position));
+                Toast.makeText(getApplicationContext(), selectedFromList, Toast.LENGTH_SHORT).show();
+
+
                 Intent intent = new Intent(view.getContext(),BusRoutActivity.class);
+                intent.putExtra("key",selectedFromList);
                 startActivity(intent);
             }
         });
