@@ -27,8 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView searchTextView, distanceView, busFareView;
     private ListView listView;
     private Button searchButton, allBusButton;
-    private String[] busDistanceName;
+    String[] busDistanceName;
     String from, to;
+    String[] bus;
 
 
     @Override
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         allBusButton.setOnClickListener(this);
 
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, busDistanceName);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, busDistanceName);
         fromautoCompleteTextView.setThreshold(1);
         toautoCompleteTextView.setThreshold(1);
 
@@ -63,10 +64,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toautoCompleteTextView.setAdapter(adapter);
 
 
-
-        ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, allBuses());
+        ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, allBuses());
         listView.setAdapter(mHistory);
-
 
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -76,8 +75,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(getApplicationContext(), selectedFromList, Toast.LENGTH_SHORT).show();
 
 
-                Intent intent = new Intent(view.getContext(),BusRoutActivity.class);
-                intent.putExtra("key",selectedFromList);
+                Intent intent = new Intent(view.getContext(), BusRoutActivity.class);
+                intent.putExtra("key", selectedFromList);
                 startActivity(intent);
             }
         });
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-        if(v.getId()==R.id.buttonId) {
+        if (v.getId() == R.id.buttonId) {
 
             from = textInputLayout1.getEditText().getText().toString();
             to = textInputLayout2.getEditText().getText().toString();
@@ -117,8 +116,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(getApplicationContext(), searchText, Toast.LENGTH_SHORT).show();
         }
 
-        if(v.getId()==R.id.allBusId) {
-            ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,android.R.id.text1, allBuses());
+        if (v.getId() == R.id.allBusId) {
+            ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, allBuses());
             listView.setAdapter(mHistory);
             searchTextView.setText("");
             distanceView.setText("");
@@ -128,63 +127,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    public static List<String> bus(String from, String to) {
+    public List<String> bus(String from, String to) {
 
-        String[] Rojonigondha = {
-                "Chittagong Road",
-                "Sign Board",
-                "Matuail",
-                "Rayerbag",
-                "Shonir Akhra",
-                "Jatrabari",
-                "Sayedabad",
-                "Gulistan",
-                "GPO",
-                "Paltan",
-                "Press Club",
-                "High Court",
-                "Shahbag",
-                "Bata Signal",
-                "Science Lab",
-                "City College",
-                "Jigatola",
-                "Dhanmondi 15",
-                "Star Kabab",
-                "Shankar",
-                "Mohammadpur",
-                "Bosila",
-                "Washpur",
-                "Arshinagar",
-                "Ghatar Char"
-        };
-
-        String[] City_Link = {
-                "Chittagong Road",
-                "Sign Board",
-                "Matuail",
-                "Rayerbag",
-                "Shonir Akhra",
-                "Jatrabari",
-                "Sayedabad",
-                "Gulistan",
-                "GPO",
-                "Paltan",
-                "Press Club",
-                "High Court",
-                "Shahbag",
-                "Bata Signal",
-                "Science Lab",
-                "City College",
-                "Jigatola",
-                "Dhanmondi 15",
-                "Star Kabab",
-                "Shankar",
-                "Mohammadpur",
-                "Bosila",
-                "Washpur",
-                "Arshinagar",
-                "Ghatar Char"
-        };
+        String[] Rojonigondha = getResources().getStringArray(R.array.Rojonigondha);
+        String[] City_Link = getResources().getStringArray(R.array.City_Link);
 
         String[] Sadhin = {"z", "m", "x", "n", "d"};
         String[] Torongo_plus = {"a", "b", "c", "d"};
@@ -197,11 +143,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //bus
         fcheck = false;
         tcheck = false;
-        for (int i = 0; i < Rojonigondha.length; i++) {
-
-            if (Rojonigondha[i].equals(from)) {
+        bus = Rojonigondha;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
                 fcheck = true;
-            } else if (Rojonigondha[i].equals(to)) {
+            } else if (bus[i].equalsIgnoreCase(to)) {
                 tcheck = true;
             }
         }
@@ -212,10 +158,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //bus
         fcheck = false;
         tcheck = false;
-        for (int i = 0; i < City_Link.length; i++) {
-            if (City_Link[i].equals(from)) {
+        bus = City_Link;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
                 fcheck = true;
-            } else if (City_Link[i].equals(to)) {
+            } else if (bus[i].equalsIgnoreCase(to)) {
                 tcheck = true;
             }
         }
@@ -226,10 +173,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //bus
         fcheck = false;
         tcheck = false;
-        for (int i = 0; i < Sadhin.length; i++) {
-            if (Sadhin[i].equals(from)) {
+        bus = Sadhin;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
                 fcheck = true;
-            } else if (Sadhin[i].equals(to)) {
+            } else if (bus[i].equalsIgnoreCase(to)) {
                 tcheck = true;
             }
         }
@@ -240,10 +188,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //bus
         fcheck = false;
         tcheck = false;
-        for (int i = 0; i < Torongo_plus.length; i++) {
-            if (Torongo_plus[i].equals(from)) {
+        bus = Torongo_plus;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
                 fcheck = true;
-            } else if (Torongo_plus[i].equals(to)) {
+            } else if (bus[i].equalsIgnoreCase(to)) {
                 tcheck = true;
             }
         }
@@ -254,10 +203,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //bus
         fcheck = false;
         tcheck = false;
-        for (int i = 0; i < Romjan.length; i++) {
-            if (Romjan[i].equals(from)) {
+        bus = Romjan;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
                 fcheck = true;
-            } else if (Romjan[i].equals(to)) {
+            } else if (bus[i].equalsIgnoreCase(to)) {
                 tcheck = true;
             }
         }
@@ -273,155 +223,155 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         double from = 0.0;
         double to = 0.0;
         double distance;
-        if ("Chittagong Road".equals(a)) {
+        if ("Chittagong Road".equalsIgnoreCase(a)) {
             from = 0.0;
         }
-        if ("Sign Board".equals(a)) {
+        if ("Sign Board".equalsIgnoreCase(a)) {
             from = 2.9;
         }
-        if ("Matuail".equals(a)) {
+        if ("Matuail".equalsIgnoreCase(a)) {
             from = 4.4;
         }
-        if ("Rayerbag".equals(a)) {
+        if ("Rayerbag".equalsIgnoreCase(a)) {
             from = 5.5;
         }
-        if ("Shonir Akhra".equals(a)) {
+        if ("Shonir Akhra".equalsIgnoreCase(a)) {
             from = 6.3;
         }
-        if ("Jatrabari".equals(a)) {
+        if ("Jatrabari".equalsIgnoreCase(a)) {
             from = 8.1;
         }
-        if ("Sayedabad".equals(a)) {
+        if ("Sayedabad".equalsIgnoreCase(a)) {
             from = 9.3;
         }
-        if ("Gulistan".equals(a)) {
+        if ("Gulistan".equalsIgnoreCase(a)) {
             from = 11.2;
         }
-        if ("GPO".equals(a)) {
+        if ("GPO".equalsIgnoreCase(a)) {
             from = 11.9;
         }
-        if ("Paltan".equals(a)) {
+        if ("Paltan".equalsIgnoreCase(a)) {
             from = 12.2;
         }
-        if ("Press Club".equals(a)) {
+        if ("Press Club".equalsIgnoreCase(a)) {
             from = 12.2;
         }
-        if ("High Court".equals(a)) {
+        if ("High Court".equalsIgnoreCase(a)) {
             from = 13.1;
         }
-        if ("Shahbag".equals(a)) {
+        if ("Shahbag".equalsIgnoreCase(a)) {
             from = 14.0;
         }
-        if ("Bata Signal".equals(a)) {
+        if ("Bata Signal".equalsIgnoreCase(a)) {
             from = 14.6;
         }
-        if ("Science Lab".equals(a)) {
+        if ("Science Lab".equalsIgnoreCase(a)) {
             from = 15.2;
         }
-        if ("City College".equals(a)) {
+        if ("City College".equalsIgnoreCase(a)) {
             from = 15.5;
         }
-        if ("Jigatola".equals(a)) {
+        if ("Jigatola".equalsIgnoreCase(a)) {
             from = 16.4;
         }
-        if ("Dhanmondi 15".equals(a)) {
+        if ("Dhanmondi 15".equalsIgnoreCase(a)) {
             from = 17.0;
         }
-        if ("Star Kabab".equals(a)) {
+        if ("Star Kabab".equalsIgnoreCase(a)) {
             from = 17.4;
         }
-        if ("Shankar".equals(a)) {
+        if ("Shankar".equalsIgnoreCase(a)) {
             from = 17.9;
         }
-        if ("Mohammadpur".equals(a)) {
+        if ("Mohammadpur".equalsIgnoreCase(a)) {
             from = 19.0;
         }
-        if ("Bosila".equals(a)) {
+        if ("Bosila".equalsIgnoreCase(a)) {
             from = 21.7;
         }
-        if ("Washpur".equals(a)) {
+        if ("Washpur".equalsIgnoreCase(a)) {
             from = 23.6;
         }
-        if ("Arshinagar".equals(a)) {
+        if ("Arshinagar".equalsIgnoreCase(a)) {
             from = 24.1;
         }
-        if ("Ghatar Char".equals(a)) {
+        if ("Ghatar Char".equalsIgnoreCase(a)) {
             from = 26.0;
         }
 
-        if ("Chittagong Road".equals(b)) {
+        if ("Chittagong Road".equalsIgnoreCase(b)) {
             to = 0.0;
         }
-        if ("Sign Board".equals(b)) {
+        if ("Sign Board".equalsIgnoreCase(b)) {
             to = 2.9;
         }
-        if ("Matuail".equals(b)) {
+        if ("Matuail".equalsIgnoreCase(b)) {
             to = 4.4;
         }
-        if ("Rayerbag".equals(b)) {
+        if ("Rayerbag".equalsIgnoreCase(b)) {
             to = 5.5;
         }
-        if ("Shonir Akhra".equals(b)) {
+        if ("Shonir Akhra".equalsIgnoreCase(b)) {
             to = 6.3;
         }
-        if ("Jatrabari".equals(b)) {
+        if ("Jatrabari".equalsIgnoreCase(b)) {
             to = 8.1;
         }
-        if ("Sayedabad".equals(b)) {
+        if ("Sayedabad".equalsIgnoreCase(b)) {
             to = 9.3;
         }
-        if ("Gulistan".equals(b)) {
+        if ("Gulistan".equalsIgnoreCase(b)) {
             to = 11.2;
         }
-        if ("GPO".equals(b)) {
+        if ("GPO".equalsIgnoreCase(b)) {
             to = 11.9;
         }
-        if ("Paltan".equals(b)) {
+        if ("Paltan".equalsIgnoreCase(b)) {
             to = 12.2;
         }
-        if ("Press Club".equals(b)) {
+        if ("Press Club".equalsIgnoreCase(b)) {
             to = 12.2;
         }
-        if ("High Court".equals(b)) {
+        if ("High Court".equalsIgnoreCase(b)) {
             to = 13.1;
         }
-        if ("Shahbag".equals(b)) {
+        if ("Shahbag".equalsIgnoreCase(b)) {
             to = 14.0;
         }
-        if ("Bata Signal".equals(b)) {
+        if ("Bata Signal".equalsIgnoreCase(b)) {
             to = 14.6;
         }
-        if ("Science Lab".equals(b)) {
+        if ("Science Lab".equalsIgnoreCase(b)) {
             to = 15.2;
         }
-        if ("City College".equals(b)) {
+        if ("City College".equalsIgnoreCase(b)) {
             to = 15.5;
         }
-        if ("Jigatola".equals(b)) {
+        if ("Jigatola".equalsIgnoreCase(b)) {
             to = 16.4;
         }
-        if ("Dhanmondi 15".equals(b)) {
+        if ("Dhanmondi 15".equalsIgnoreCase(b)) {
             to = 17.0;
         }
-        if ("Star Kabab".equals(b)) {
+        if ("Star Kabab".equalsIgnoreCase(b)) {
             to = 17.4;
         }
-        if ("Shankar".equals(b)) {
+        if ("Shankar".equalsIgnoreCase(b)) {
             to = 17.9;
         }
-        if ("Mohammadpur".equals(b)) {
+        if ("Mohammadpur".equalsIgnoreCase(b)) {
             to = 19.0;
         }
-        if ("Bosila".equals(b)) {
+        if ("Bosila".equalsIgnoreCase(b)) {
             to = 21.7;
         }
-        if ("Washpur".equals(b)) {
+        if ("Washpur".equalsIgnoreCase(b)) {
             to = 23.6;
         }
-        if ("Arshinagar".equals(b)) {
+        if ("Arshinagar".equalsIgnoreCase(b)) {
             to = 24.1;
         }
-        if ("Ghatar Char".equals(b)) {
+        if ("Ghatar Char".equalsIgnoreCase(b)) {
             to = 26.0;
         }
 
@@ -444,155 +394,155 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         double from = 0.0;
         double to = 0.0;
         double distance;
-        if ("Chittagong Road".equals(a)) {
+        if ("Chittagong Road".equalsIgnoreCase(a)) {
             from = 0.0;
         }
-        if ("Sign Board".equals(a)) {
+        if ("Sign Board".equalsIgnoreCase(a)) {
             from = 2.9;
         }
-        if ("Matuail".equals(a)) {
+        if ("Matuail".equalsIgnoreCase(a)) {
             from = 4.4;
         }
-        if ("Rayerbag".equals(a)) {
+        if ("Rayerbag".equalsIgnoreCase(a)) {
             from = 5.5;
         }
-        if ("Shonir Akhra".equals(a)) {
+        if ("Shonir Akhra".equalsIgnoreCase(a)) {
             from = 6.3;
         }
-        if ("Jatrabari".equals(a)) {
+        if ("Jatrabari".equalsIgnoreCase(a)) {
             from = 8.1;
         }
-        if ("Sayedabad".equals(a)) {
+        if ("Sayedabad".equalsIgnoreCase(a)) {
             from = 9.3;
         }
-        if ("Gulistan".equals(a)) {
+        if ("Gulistan".equalsIgnoreCase(a)) {
             from = 11.2;
         }
-        if ("GPO".equals(a)) {
+        if ("GPO".equalsIgnoreCase(a)) {
             from = 11.9;
         }
-        if ("Paltan".equals(a)) {
+        if ("Paltan".equalsIgnoreCase(a)) {
             from = 12.2;
         }
-        if ("Press Club".equals(a)) {
+        if ("Press Club".equalsIgnoreCase(a)) {
             from = 12.2;
         }
-        if ("High Court".equals(a)) {
+        if ("High Court".equalsIgnoreCase(a)) {
             from = 13.1;
         }
-        if ("Shahbag".equals(a)) {
+        if ("Shahbag".equalsIgnoreCase(a)) {
             from = 14.0;
         }
-        if ("Bata Signal".equals(a)) {
+        if ("Bata Signal".equalsIgnoreCase(a)) {
             from = 14.6;
         }
-        if ("Science Lab".equals(a)) {
+        if ("Science Lab".equalsIgnoreCase(a)) {
             from = 15.2;
         }
-        if ("City College".equals(a)) {
+        if ("City College".equalsIgnoreCase(a)) {
             from = 15.5;
         }
-        if ("Jigatola".equals(a)) {
+        if ("Jigatola".equalsIgnoreCase(a)) {
             from = 16.4;
         }
-        if ("Dhanmondi 15".equals(a)) {
+        if ("Dhanmondi 15".equalsIgnoreCase(a)) {
             from = 17.0;
         }
-        if ("Star Kabab".equals(a)) {
+        if ("Star Kabab".equalsIgnoreCase(a)) {
             from = 17.4;
         }
-        if ("Shankar".equals(a)) {
+        if ("Shankar".equalsIgnoreCase(a)) {
             from = 17.9;
         }
-        if ("Mohammadpur".equals(a)) {
+        if ("Mohammadpur".equalsIgnoreCase(a)) {
             from = 19.0;
         }
-        if ("Bosila".equals(a)) {
+        if ("Bosila".equalsIgnoreCase(a)) {
             from = 21.7;
         }
-        if ("Washpur".equals(a)) {
+        if ("Washpur".equalsIgnoreCase(a)) {
             from = 23.6;
         }
-        if ("Arshinagar".equals(a)) {
+        if ("Arshinagar".equalsIgnoreCase(a)) {
             from = 24.1;
         }
-        if ("Ghatar Char".equals(a)) {
+        if ("Ghatar Char".equalsIgnoreCase(a)) {
             from = 26.0;
         }
 
-        if ("Chittagong Road".equals(b)) {
+        if ("Chittagong Road".equalsIgnoreCase(b)) {
             to = 0.0;
         }
-        if ("Sign Board".equals(b)) {
+        if ("Sign Board".equalsIgnoreCase(b)) {
             to = 2.9;
         }
-        if ("Matuail".equals(b)) {
+        if ("Matuail".equalsIgnoreCase(b)) {
             to = 4.4;
         }
-        if ("Rayerbag".equals(b)) {
+        if ("Rayerbag".equalsIgnoreCase(b)) {
             to = 5.5;
         }
-        if ("Shonir Akhra".equals(b)) {
+        if ("Shonir Akhra".equalsIgnoreCase(b)) {
             to = 6.3;
         }
-        if ("Jatrabari".equals(b)) {
+        if ("Jatrabari".equalsIgnoreCase(b)) {
             to = 8.1;
         }
-        if ("Sayedabad".equals(b)) {
+        if ("Sayedabad".equalsIgnoreCase(b)) {
             to = 9.3;
         }
-        if ("Gulistan".equals(b)) {
+        if ("Gulistan".equalsIgnoreCase(b)) {
             to = 11.2;
         }
-        if ("GPO".equals(b)) {
+        if ("GPO".equalsIgnoreCase(b)) {
             to = 11.9;
         }
-        if ("Paltan".equals(b)) {
+        if ("Paltan".equalsIgnoreCase(b)) {
             to = 12.2;
         }
-        if ("Press Club".equals(b)) {
+        if ("Press Club".equalsIgnoreCase(b)) {
             to = 12.2;
         }
-        if ("High Court".equals(b)) {
+        if ("High Court".equalsIgnoreCase(b)) {
             to = 13.1;
         }
-        if ("Shahbag".equals(b)) {
+        if ("Shahbag".equalsIgnoreCase(b)) {
             to = 14.0;
         }
-        if ("Bata Signal".equals(b)) {
+        if ("Bata Signal".equalsIgnoreCase(b)) {
             to = 14.6;
         }
-        if ("Science Lab".equals(b)) {
+        if ("Science Lab".equalsIgnoreCase(b)) {
             to = 15.2;
         }
-        if ("City College".equals(b)) {
+        if ("City College".equalsIgnoreCase(b)) {
             to = 15.5;
         }
-        if ("Jigatola".equals(b)) {
+        if ("Jigatola".equalsIgnoreCase(b)) {
             to = 16.4;
         }
-        if ("Dhanmondi 15".equals(b)) {
+        if ("Dhanmondi 15".equalsIgnoreCase(b)) {
             to = 17.0;
         }
-        if ("Star Kabab".equals(b)) {
+        if ("Star Kabab".equalsIgnoreCase(b)) {
             to = 17.4;
         }
-        if ("Shankar".equals(b)) {
+        if ("Shankar".equalsIgnoreCase(b)) {
             to = 17.9;
         }
-        if ("Mohammadpur".equals(b)) {
+        if ("Mohammadpur".equalsIgnoreCase(b)) {
             to = 19.0;
         }
-        if ("Bosila".equals(b)) {
+        if ("Bosila".equalsIgnoreCase(b)) {
             to = 21.7;
         }
-        if ("Washpur".equals(b)) {
+        if ("Washpur".equalsIgnoreCase(b)) {
             to = 23.6;
         }
-        if ("Arshinagar".equals(b)) {
+        if ("Arshinagar".equalsIgnoreCase(b)) {
             to = 24.1;
         }
-        if ("Ghatar Char".equals(b)) {
+        if ("Ghatar Char".equalsIgnoreCase(b)) {
             to = 26.0;
         }
 
@@ -609,176 +559,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     List<String> allBuses() {
-        String[] allBus = {
-                "Achim Paribahan",
-                "Active Paribahan",
-                "Agradut",
-                "Airport Bangabandhu Avenue",
-                "Azmeri Glory",
-                "Ajmi",
-                "Akash",
-                "Akik",
-                "Al Makka",
-                "Al Madina Plus One",
-                "Alif",
-                "Anabil Super",
-                "Arnob",
-                "Ashirbad Pahibahan",
-                "Ashulia Classic",
-                "Asmani",
-                "Ayat",
-                "Bahon",
-                "Baishakhi",
-                "Balaka",
-                "Basumati",
-                "Basumati Transport",
-                "Best Satabdi AC",
-                "Best Transport",
-                "Bhuiyan Paribahan",
-                "Bihanga",
-                "Bikalpa",
-                "Bikalpa",
-                "Bikash",
-                "Bikash Paribahan",
-                "Bondhu Paribahan",
-                "Borak",
-                "Bashumoti",
-                "Brihottor Mirpur",
-                "BRTC",
-                "BRTC",
-                "BRTC",
-                "BRTC",
-                "BRTC",
-                "BRTC",
-                "BRTC",
-                "BRTC",
-                "BRTC",
-                "BRTC",
-                "Cantonment",
-                "Cantonment Mini Service",
-                "Champion",
-                "City Link",
-                "D Link",
-                "D One Transport",
-                "Deepan",
-                "Desh Bangla",
-                "Dewan",
-                "Dhakar Chaka",
-                "Dhakar Chaka",
-                "Dhaka Metro Service",
-                "Dhaka Paribahan",
-                "Dipon",
-                "Dip Paribahan",
-                "Dishari",
-                "Elite",
-                "ETC",
-                "ETC Transport",
-                "Everest Paribahan",
-                "Falgun Art Transport",
-                "First Ten",
-                "Gazipur Paribahan",
-                "Grameen",
-                "Grameen Suveccha",
-                "Green Anabil",
-                "Green Dhaka",
-                "Gulshan Chaka",
-                "Hazi Transport",
-                "Himachal",
-                "Himachal Suveccha",
-                "Himalay",
-                "Itihash",
-                "J M Super Paribahan",
-                "Kamal Plus Paribahan",
-                "kanak",
-                "Khajababa",
-                "Kironmala Paribahan",
-                "Labbayek",
-                "Lal Sabuj (AC)",
-                "Lams Paribahan",
-                "Malancha",
-                "Manjil Express",
-                "Meghla Transport",
-                "Meshkat",
-                "Midline",
-                "Mirpur Metro Services",
-                "Mirpur Link",
-                "Mirpur Mission",
-                "Mirpur Transport",
-                "Mirpur United Service",
-                "MM Lovely",
-                "Modhumita",
-                "Mohona",
-                "Moitri",
-                "Moumita",
-                "Nur E Makka",
-                "Nabakali",
-                "New Vision",
-                "Nilachol",
-                "Nishorgo",
-                "Omama International",
-                "One Transport",
-                "Pallabi Local Service",
-                "Pallabi Super",
-                "Paristhan",
-                "Power Paribahan",
-                "Prattay",
-                "Prochesta",
-                "Projapati",
-                "Provati Banasree",
-                "Purbachol Logistics and Transport",
-                "Raida",
-                "Raja City",
-                "Rajanigandha",
-                "Rajdhani Super",
-                "Ramjan",
-                "Robrob",
-                "Rois",
-                "Rongdhonu Express",
-                "Runway Express",
-                "Rupa Paribahan",
-                "Rupkotha",
-                "Safety Druti",
-                "Sakalpa Transport",
-                "Salsabil",
-                "Savar Paribahan",
-                "Shadhin",
-                "Shadhin Express",
-                "Shahria Enterprise",
-                "Shatabdi",
-                "Shikhor Paribahan",
-                "Suveccha",
-                "Suvojatri",
-                "Siam Transport",
-                "Skyline",
-                "Somota Paribahan",
-                "Somoy",
-                "Somoy Niyantran",
-                "Super",
-                "Supravat",
-                "Swajan Paribahan",
-                "Talukdar",
-                "Tanjil Paribahan",
-                "Taranga Plus",
-                "Tetulia",
-                "Thikana",
-                "Thikana Express",
-                "Titas",
-                "Transilva",
-                "Trust Transport",
-                "Turag",
-                "Victor Classic",
-                "Victor Paribahan",
-                "VIP 27",
-                "Welcome",
-                "Winner",
-                "13 No.",
-                "4 No.",
-                "6 No.",
-                "6 No.",
-                "7 No.",
-                "8 No.",
-                "9 No."
-        };
+        String[] allBus = getResources().getStringArray(R.array.all_bus);
 
         List<String> allBusList = new ArrayList();
         for (int i = 0; i < allBus.length; i++) {

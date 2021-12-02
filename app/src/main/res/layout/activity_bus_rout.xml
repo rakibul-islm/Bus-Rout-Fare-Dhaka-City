@@ -122,8 +122,7 @@
 
 
                                         <TextView
-                                            android:text="Chittagong Road - Ghatar Char"
-                                            android:id="@+id/busFareId"
+                                            android:id="@+id/busRoutDestinationId"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1"

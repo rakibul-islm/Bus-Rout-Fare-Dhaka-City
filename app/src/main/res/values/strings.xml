@@ -1,6 +1,177 @@
 <resources>
     <string name="app_name">Bus Fare - Dhaka City</string>
 
+    <string-array name="all_bus">
+        <item>Achim Paribahan</item>
+        <item>Active Paribahan</item>
+        <item>Agradut</item>
+        <item>Airport Bangabandhu Avenue</item>
+        <item>Azmeri Glory</item>
+        <item>Ajmi</item>
+        <item>Akash</item>
+        <item>Akik</item>
+        <item>Al Makka</item>
+        <item>Al Madina Plus One</item>
+        <item>Alif</item>
+        <item>Anabil Super</item>
+        <item>Arnob</item>
+        <item>Ashirbad Pahibahan</item>
+        <item>Ashulia Classic</item>
+        <item>Asmani</item>
+        <item>Ayat</item>
+        <item>Bahon</item>
+        <item>Baishakhi</item>
+        <item>Balaka</item>
+        <item>Basumati</item>
+        <item>Basumati Transport</item>
+        <item>Best Satabdi AC</item>
+        <item>Best Transport</item>
+        <item>Bhuiyan Paribahan</item>
+        <item>Bihanga</item>
+        <item>Bikalpa</item>
+        <item>Bikalpa</item>
+        <item>Bikash</item>
+        <item>Bikash Paribahan</item>
+        <item>Bondhu Paribahan</item>
+        <item>Borak</item>
+        <item>Bashumoti</item>
+        <item>Brihottor Mirpur</item>
+        <item>BRTC</item>
+        <item>BRTC</item>
+        <item>BRTC</item>
+        <item>BRTC</item>
+        <item>BRTC</item>
+        <item>BRTC</item>
+        <item>BRTC</item>
+        <item>BRTC</item>
+        <item>BRTC</item>
+        <item>BRTC</item>
+        <item>Cantonment</item>
+        <item>Cantonment Mini Service</item>
+        <item>Champion</item>
+        <item>City Link</item>
+        <item>D Link</item>
+        <item>D One Transport</item>
+        <item>Deepan</item>
+        <item>Desh Bangla</item>
+        <item>Dewan</item>
+        <item>Dhakar Chaka</item>
+        <item>Dhakar Chaka</item>
+        <item>Dhaka Metro Service</item>
+        <item>Dhaka Paribahan</item>
+        <item>Dipon</item>
+        <item>Dip Paribahan</item>
+        <item>Dishari</item>
+        <item>Elite</item>
+        <item>ETC</item>
+        <item>ETC Transport</item>
+        <item>Everest Paribahan</item>
+        <item>Falgun Art Transport</item>
+        <item>First Ten</item>
+        <item>Gazipur Paribahan</item>
+        <item>Grameen</item>
+        <item>Grameen Suveccha</item>
+        <item>Green Anabil</item>
+        <item>Green Dhaka</item>
+        <item>Gulshan Chaka</item>
+        <item>Hazi Transport</item>
+        <item>Himachal</item>
+        <item>Himachal Suveccha</item>
+        <item>Himalay</item>
+        <item>Itihash</item>
+        <item>J M Super Paribahan</item>
+        <item>Kamal Plus Paribahan</item>
+        <item>kanak</item>
+        <item>Khajababa</item>
+        <item>Kironmala Paribahan</item>
+        <item>Labbayek</item>
+        <item>Lal Sabuj (AC)</item>
+        <item>Lams Paribahan</item>
+        <item>Malancha</item>
+        <item>Manjil Express</item>
+        <item>Meghla Transport</item>
+        <item>Meshkat</item>
+        <item>Midline</item>
+        <item>Mirpur Metro Services</item>
+        <item>Mirpur Link</item>
+        <item>Mirpur Mission</item>
+        <item>Mirpur Transport</item>
+        <item>Mirpur United Service</item>
+        <item>MM Lovely</item>
+        <item>Modhumita</item>
+        <item>Mohona</item>
+        <item>Moitri</item>
+        <item>Moumita</item>
+        <item>Nur E Makka</item>
+        <item>Nabakali</item>
+        <item>New Vision</item>
+        <item>Nilachol</item>
+        <item>Nishorgo</item>
+        <item>Omama International</item>
+        <item>One Transport</item>
+        <item>Pallabi Local Service</item>
+        <item>Pallabi Super</item>
+        <item>Paristhan</item>
+        <item>Power Paribahan</item>
+        <item>Prattay</item>
+        <item>Prochesta</item>
+        <item>Projapati</item>
+        <item>Provati Banasree</item>
+        <item>Purbachol Logistics and Transport</item>
+        <item>Raida</item>
+        <item>Raja City</item>
+        <item>Rojonigondha</item>
+        <item>Rajdhani Super</item>
+        <item>Ramjan</item>
+        <item>Robrob</item>
+        <item>Rois</item>
+        <item>Rongdhonu Express</item>
+        <item>Runway Express</item>
+        <item>Rupa Paribahan</item>
+        <item>Rupkotha</item>
+        <item>Safety Druti</item>
+        <item>Sakalpa Transport</item>
+        <item>Salsabil</item>
+        <item>Savar Paribahan</item>
+        <item>Shadhin</item>
+        <item>Shadhin Express</item>
+        <item>Shahria Enterprise</item>
+        <item>Shatabdi</item>
+        <item>Shikhor Paribahan</item>
+        <item>Suveccha</item>
+        <item>Suvojatri</item>
+        <item>Siam Transport</item>
+        <item>Skyline</item>
+        <item>Somota Paribahan</item>
+        <item>Somoy</item>
+        <item>Somoy Niyantran</item>
+        <item>Super</item>
+        <item>Supravat</item>
+        <item>Swajan Paribahan</item>
+        <item>Talukdar</item>
+        <item>Tanjil Paribahan</item>
+        <item>Taranga Plus</item>
+        <item>Tetulia</item>
+        <item>Thikana</item>
+        <item>Thikana Express</item>
+        <item>Titas</item>
+        <item>Transilva</item>
+        <item>Trust Transport</item>
+        <item>Turag</item>
+        <item>Victor Classic</item>
+        <item>Victor Paribahan</item>
+        <item>VIP 27</item>
+        <item>Welcome</item>
+        <item>Winner</item>
+        <item>13 No.</item>
+        <item>4 No.</item>
+        <item>6 No.</item>
+        <item>6 No.</item>
+        <item>7 No.</item>
+        <item>8 No.</item>
+        <item>9 No.</item>
+    </string-array>
+
     <string-array name="distance_name">
         <item>Chittagong Road</item>
         <item>Sign Board</item>
@@ -12,7 +183,7 @@
         <item>GPO</item>
         <item>Paltan</item>
         <item>Press Club</item>
-        <item>High Cour</item>
+        <item>High Court</item>
         <item>Shahbag</item>
         <item>Bata Signal</item>
         <item>Science Lab</item>
@@ -26,7 +197,62 @@
         <item>Washpur</item>
         <item>Arshinagar</item>
         <item>Ghatar Char</item>
+    </string-array>
 
+
+    <string-array name="Rojonigondha">
+        <item>Chittagong Road</item>
+        <item>Sign Board</item>
+        <item>Matuail</item>
+        <item>Rayerbag</item>
+        <item>Jatrabari</item>
+        <item>Sayedabad</item>
+        <item>Gulistan</item>
+        <item>GPO</item>
+        <item>Paltan</item>
+        <item>Press Club</item>
+        <item>High Court</item>
+        <item>Shahbag</item>
+        <item>Bata Signal</item>
+        <item>Science Lab</item>
+        <item>City College</item>
+        <item>Jigatola</item>
+        <item>Dhanmondi 15</item>
+        <item>Star Kabab</item>
+        <item>Shankar</item>
+        <item>Mohammadpur</item>
+        <item>Bosila</item>
+        <item>Washpur</item>
+        <item>Arshinagar</item>
+        <item>Ghatar Char</item>
+    </string-array>
+
+
+    <string-array name="City_Link">
+        <item>Chittagong Road</item>
+        <item>Sign Board</item>
+        <item>Matuail</item>
+        <item>Rayerbag</item>
+        <item>Jatrabari</item>
+        <item>Sayedabad</item>
+        <item>Gulistan</item>
+        <item>GPO</item>
+        <item>Paltan</item>
+        <item>Press Club</item>
+        <item>High Court</item>
+        <item>Shahbag</item>
+        <item>Bata Signal</item>
+        <item>Science Lab</item>
+        <item>City College</item>
+        <item>Jigatola</item>
+        <item>Dhanmondi 15</item>
+        <item>Star Kabab</item>
+        <item>Shankar</item>
+        <item>Mohammadpur</item>
+        <item>Bosila</item>
+        <item>Washpur</item>
+        <item>Arshinagar</item>
+        <item>Ghatar Char</item>
     </string-array>
 
 
