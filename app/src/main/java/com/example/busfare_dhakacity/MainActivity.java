@@ -110,6 +110,73 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (busList.get(i).equalsIgnoreCase("Projapati")) {
                     routNo = 4;
                 }
+
+                if (busList.get(i).equalsIgnoreCase("Achim Paribahan")) {
+                    routNo = 5;
+                }
+                if (busList.get(i).equalsIgnoreCase("Active Paribahan")) {
+                    routNo = 6;
+                }
+                if (busList.get(i).equalsIgnoreCase("Agradut")) {
+                    routNo = 7;
+                }
+                if (busList.get(i).equalsIgnoreCase("Airport Bangabandhu Avenue")) {
+                    routNo = 8;
+                }
+                if (busList.get(i).equalsIgnoreCase("Azmeri Glory")) {
+                    routNo = 9;
+                }
+                if (busList.get(i).equalsIgnoreCase("Ajmi")) {
+                    routNo = 10;
+                }
+                if (busList.get(i).equalsIgnoreCase("Akash")) {
+                    routNo = 11;
+                }
+                if (busList.get(i).equalsIgnoreCase("Akik")) {
+                    routNo = 12;
+                }
+                if (busList.get(i).equalsIgnoreCase("Al Makka")) {
+                    routNo = 13;
+                }
+                if (busList.get(i).equalsIgnoreCase("Al Madina Plus")) {
+                    routNo = 14;
+                }
+                if (busList.get(i).equalsIgnoreCase("Alif")) {
+                    routNo = 15;
+                }
+                if (busList.get(i).equalsIgnoreCase("Anabil Super")) {
+                    routNo = 16;
+                }
+                if (busList.get(i).equalsIgnoreCase("Arnob")) {
+                    routNo = 17;
+                }
+                if (busList.get(i).equalsIgnoreCase("Ashirbad Pahibahan")) {
+                    routNo = 18;
+                }
+                if (busList.get(i).equalsIgnoreCase("Ashulia Classic")) {
+                    routNo = 19;
+                }
+                if (busList.get(i).equalsIgnoreCase("Asmani")) {
+                    routNo = 20;
+                }
+                if (busList.get(i).equalsIgnoreCase("Ayat")) {
+                    routNo = 21;
+                }
+                if (busList.get(i).equalsIgnoreCase("Bahon")) {
+                    routNo = 22;
+                }
+                if (busList.get(i).equalsIgnoreCase("Baishakhi")) {
+                    routNo = 23;
+                }
+                if (busList.get(i).equalsIgnoreCase("Balaka")) {
+                    routNo = 24;
+                }
+                if (busList.get(i).equalsIgnoreCase("Basumati")) {
+                    routNo = 25;
+                }
+                if (busList.get(i).equalsIgnoreCase("Basumati Transport")) {
+                    routNo = 26;
+                }
             }
 
             String distance = dis(from, to);
@@ -594,12 +661,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-
-
-
-
-
-
     // bus fare calculation
 
     public int busRent(String a, String b) {
@@ -607,7 +668,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         double to = 0.0;
         double distance;
 
-        //busRoutNo1
+        //busRoutNo-1 Rojonigondha
         if (routNo == 1) {
             if ("Chittagong Road".equalsIgnoreCase(a)) {
                 from = 0.0;
@@ -762,20 +823,617 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
 
-        //busRoutNo2
+        //busRoutNo-2 Sadhin
         if (routNo == 2) {
+            // from
+            if ("Bosila".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+            if ("Mohammadpur".equalsIgnoreCase(a)) {
+                from = 3.0;
+            }
+            if ("Asad Gate".equalsIgnoreCase(a)) {
+                from = 4.3;
+            }
+            if ("Khamar Bari".equalsIgnoreCase(a)) {
+                from = 5.5;
+            }
+            if ("Farmgate".equalsIgnoreCase(a)) {
+                from = 6.0;
+            }
+            if ("Kawran Bazar".equalsIgnoreCase(a)) {
+                from = 7.5;
+            }
+            if ("Bangla Motor".equalsIgnoreCase(a)) {
+                from = 8.0;
+            }
+            if ("Mogbazar".equalsIgnoreCase(a)) {
+                from = 9.2;
+            }
+            if ("Mouchak".equalsIgnoreCase(a)) {
+                from = 10.2;
+            }
+            if ("Malibagh Railgate".equalsIgnoreCase(a)) {
+                from = 11.0;
+            }
+            if ("Hazipara".equalsIgnoreCase(a)) {
+                from = 11.7;
+            }
+            if ("Rampura Bazar".equalsIgnoreCase(a)) {
+                from = 12.7;
+            }
+            if ("Rampura Bridge".equalsIgnoreCase(a)) {
+                from = 13.2;
+            }
+            if ("Banasree".equalsIgnoreCase(a)) {
+                from = 15.5;
+            }
+            if ("Demra Staff Quarter".equalsIgnoreCase(a)) {
+                from = 23.5;
+            }
+            // to
+            if ("Bosila".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+            if ("Mohammadpur".equalsIgnoreCase(b)) {
+                to = 3.0;
+            }
+            if ("Asad Gate".equalsIgnoreCase(b)) {
+                to = 4.3;
+            }
+            if ("Khamar Bari".equalsIgnoreCase(b)) {
+                to = 5.5;
+            }
+            if ("Farmgate".equalsIgnoreCase(b)) {
+                to = 6.0;
+            }
+            if ("Kawran Bazar".equalsIgnoreCase(b)) {
+                to = 7.5;
+            }
+            if ("Bangla Motor".equalsIgnoreCase(b)) {
+                to = 8.0;
+            }
+            if ("Mogbazar".equalsIgnoreCase(b)) {
+                to = 9.2;
+            }
+            if ("Mouchak".equalsIgnoreCase(b)) {
+                to = 10.2;
+            }
+            if ("Malibagh Railgate".equalsIgnoreCase(b)) {
+                to = 11.0;
+            }
+            if ("Hazipara".equalsIgnoreCase(b)) {
+                to = 11.7;
+            }
+            if ("Rampura Bazar".equalsIgnoreCase(b)) {
+                to = 12.7;
+            }
+            if ("Rampura Bridge".equalsIgnoreCase(b)) {
+                to = 13.2;
+            }
+            if ("Banasree".equalsIgnoreCase(b)) {
+                to = 15.5;
+            }
+            if ("Demra Staff Quarter".equalsIgnoreCase(b)) {
+                to = 23.5;
+            }
+
+        }
+        //busRoutNo-3 Torongo Plus
+        if (routNo == 3) {
+            // from
             if ("Chittagong Road".equalsIgnoreCase(a)) {
                 from = 0.0;
             }
 
 
+            // to
             if ("Chittagong Road".equalsIgnoreCase(b)) {
                 to = 0.0;
             }
 
         }
-        //busRoutNo3
+        //busRoutNo-4 Projapoti
+        if (routNo == 4) {
+            // from
+            if ("Ghatar Char".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+            if ("Arshinagar".equalsIgnoreCase(a)) {
+                from = 1.9;
+            }
+            if ("Washpur".equalsIgnoreCase(a)) {
+                from = 2.4;
+            }
+            if ("Bosila".equalsIgnoreCase(a)) {
+                from = 4.3;
+            }
+            if ("Mohammadpur".equalsIgnoreCase(a)) {
+                from = 7.0;
+            }
+            if ("Asad Gate".equalsIgnoreCase(a)) {
+                from = 8.0;
+            }
+            if ("College Gate".equalsIgnoreCase(a)) {
+                from = 8.6;
+            }
+            if ("Shyamoli".equalsIgnoreCase(a)) {
+                from = 9.8;
+            }
+            if ("Kallyanpur".equalsIgnoreCase(a)) {
+                from = 10.13;
+            }
+            if ("Darussalam".equalsIgnoreCase(a)) {
+                from = 10.50;
+            }
+            if ("Technical".equalsIgnoreCase(a)) {
+                from = 11.05;
+            }
+            if ("Bangla College".equalsIgnoreCase(a)) {
+                from = 11.30;
+            }
+            if ("Ansar Camp".equalsIgnoreCase(a)) {
+                from = 12.0;
+            }
+            if ("Mirpur 1".equalsIgnoreCase(a)) {
+                from = 13.50;
+            }
+            if ("Mirpur 2".equalsIgnoreCase(a)) {
+                from = 14.80;
+            }
+            if ("Mirpur 10".equalsIgnoreCase(a)) {
+                from = 15.30;
+            }
+            if ("Mirpur 11".equalsIgnoreCase(a)) {
+                from = 16.30;
+            }
+            if ("Purobi".equalsIgnoreCase(a)) {
+                from = 16.80;
+            }
+            if ("Kalshi".equalsIgnoreCase(a)) {
+                from = 20.0;
+            }
+            if ("ECB Square".equalsIgnoreCase(a)) {
+                from = 22.0;
+            }
+            if ("MES".equalsIgnoreCase(a)) {
+                from = 24.0;
+            }
+            if ("Shewra".equalsIgnoreCase(a)) {
+                from = 24.40;
+            }
+            if ("Kuril Bishwa Road".equalsIgnoreCase(a)) {
+                from = 25.0;
+            }
+            if ("Khilkhet".equalsIgnoreCase(a)) {
+                from = 26.0;
+            }
+            if ("Airport".equalsIgnoreCase(a)) {
+                from = 28.4;
+            }
+            if ("Jashimuddin".equalsIgnoreCase(a)) {
+                from = 29.6;
+            }
+            if ("Rajlakshmi".equalsIgnoreCase(a)) {
+                from = 29.9;
+            }
+            if ("House Building".equalsIgnoreCase(a)) {
+                from = 30.2;
+            }
+            if ("Abdullahpur".equalsIgnoreCase(a)) {
+                from = 32.1;
+            }
+            if ("Kamarpara".equalsIgnoreCase(a)) {
+                from = 34.2;
+            }
 
+            // to
+            if ("Ghatar Char".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+            if ("Arshinagar".equalsIgnoreCase(b)) {
+                to = 1.9;
+            }
+            if ("Washpur".equalsIgnoreCase(b)) {
+                to = 2.4;
+            }
+            if ("Bosila".equalsIgnoreCase(b)) {
+                to = 4.3;
+            }
+            if ("Mohammadpur".equalsIgnoreCase(b)) {
+                to = 7.0;
+            }
+            if ("Asad Gate".equalsIgnoreCase(b)) {
+                to = 8.0;
+            }
+            if ("College Gate".equalsIgnoreCase(b)) {
+                to = 8.6;
+            }
+            if ("Shyamoli".equalsIgnoreCase(b)) {
+                to = 9.8;
+            }
+            if ("Kallyanpur".equalsIgnoreCase(b)) {
+                to = 10.13;
+            }
+            if ("Darussalam".equalsIgnoreCase(b)) {
+                to = 10.50;
+            }
+            if ("Technical".equalsIgnoreCase(b)) {
+                to = 11.05;
+            }
+            if ("Bangla College".equalsIgnoreCase(b)) {
+                to = 11.30;
+            }
+            if ("Ansar Camp".equalsIgnoreCase(b)) {
+                to = 12.0;
+            }
+            if ("Mirpur 1".equalsIgnoreCase(b)) {
+                to = 13.50;
+            }
+            if ("Mirpur 2".equalsIgnoreCase(b)) {
+                to = 14.80;
+            }
+            if ("Mirpur 10".equalsIgnoreCase(b)) {
+                to = 15.30;
+            }
+            if ("Mirpur 11".equalsIgnoreCase(b)) {
+                to = 16.30;
+            }
+            if ("Purobi".equalsIgnoreCase(b)) {
+                to = 16.80;
+            }
+            if ("Kalshi".equalsIgnoreCase(b)) {
+                to = 20.0;
+            }
+            if ("ECB Square".equalsIgnoreCase(b)) {
+                to = 22.0;
+            }
+            if ("MES".equalsIgnoreCase(b)) {
+                to = 24.0;
+            }
+            if ("Shewra".equalsIgnoreCase(b)) {
+                to = 24.40;
+            }
+            if ("Kuril Bishwa Road".equalsIgnoreCase(b)) {
+                to = 25.0;
+            }
+            if ("Khilkhet".equalsIgnoreCase(b)) {
+                to = 26.0;
+            }
+            if ("Airport".equalsIgnoreCase(b)) {
+                to = 28.4;
+            }
+            if ("Jashimuddin".equalsIgnoreCase(b)) {
+                to = 29.6;
+            }
+            if ("Rajlakshmi".equalsIgnoreCase(b)) {
+                to = 29.9;
+            }
+            if ("House Building".equalsIgnoreCase(b)) {
+                to = 30.2;
+            }
+            if ("Abdullahpur".equalsIgnoreCase(b)) {
+                to = 32.1;
+            }
+            if ("Kamarpara".equalsIgnoreCase(b)) {
+                to = 34.2;
+            }
+
+        }
+        //busRoutNo-5 Achim Paribahan
+        if (routNo == 5) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-6 Active Paribahan
+        if (routNo == 6) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-7 Agradut
+        if (routNo == 7) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-8 Airport Bangabandhu Avenue
+        if (routNo == 8) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-9 Azmeri Glory
+        if (routNo == 9) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-10 Ajmi
+        if (routNo == 10) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-11 Akash
+        if (routNo == 11) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-12 Akik
+        if (routNo == 12) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-13 Al Makka
+        if (routNo == 13) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-14 Al Madina Plus
+        if (routNo == 14) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-15 Alif
+        if (routNo == 15) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-16 Anabil Super
+        if (routNo == 16) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-17 Arnob
+        if (routNo == 17) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-18 Ashirbad Pahibahan
+        if (routNo == 18) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-19 Ashulia Classic
+        if (routNo == 19) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-20 Asmani
+        if (routNo == 20) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-21 Ayat
+        if (routNo == 21) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-22 Bahon
+        if (routNo == 22) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-23 Baishakhi
+        if (routNo == 23) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-24 Balaka
+        if (routNo == 24) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-25 Basumati
+        if (routNo == 25) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo-26 Basumati Transport
+        if (routNo == 26) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo
+
+
+
+
+        
 
         int rent;
 
@@ -794,6 +1452,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         return rent;
     }
+
 
     public String dis(String a, String b) {
         double from = 0.0;
@@ -953,7 +1612,304 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 to = 26.0;
             }
         }
-        //busRoutNo
+        //busRoutNo2
+        if (routNo == 2) {
+            // from
+            if ("Bosila".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+            if ("Mohammadpur".equalsIgnoreCase(a)) {
+                from = 3.0;
+            }
+            if ("Asad Gate".equalsIgnoreCase(a)) {
+                from = 4.3;
+            }
+            if ("Khamar Bari".equalsIgnoreCase(a)) {
+                from = 5.5;
+            }
+            if ("Farmgate".equalsIgnoreCase(a)) {
+                from = 6.0;
+            }
+            if ("Kawran Bazar".equalsIgnoreCase(a)) {
+                from = 7.5;
+            }
+            if ("Bangla Motor".equalsIgnoreCase(a)) {
+                from = 8.0;
+            }
+            if ("Mogbazar".equalsIgnoreCase(a)) {
+                from = 9.2;
+            }
+            if ("Mouchak".equalsIgnoreCase(a)) {
+                from = 10.2;
+            }
+            if ("Malibagh Railgate".equalsIgnoreCase(a)) {
+                from = 11.0;
+            }
+            if ("Hazipara".equalsIgnoreCase(a)) {
+                from = 11.7;
+            }
+            if ("Rampura Bazar".equalsIgnoreCase(a)) {
+                from = 12.7;
+            }
+            if ("Rampura Bridge".equalsIgnoreCase(a)) {
+                from = 13.2;
+            }
+            if ("Banasree".equalsIgnoreCase(a)) {
+                from = 15.5;
+            }
+            if ("Demra Staff Quarter".equalsIgnoreCase(a)) {
+                from = 23.5;
+            }
+            // to
+            if ("Bosila".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+            if ("Mohammadpur".equalsIgnoreCase(b)) {
+                to = 3.0;
+            }
+            if ("Asad Gate".equalsIgnoreCase(b)) {
+                to = 4.3;
+            }
+            if ("Khamar Bari".equalsIgnoreCase(b)) {
+                to = 5.5;
+            }
+            if ("Farmgate".equalsIgnoreCase(b)) {
+                to = 6.0;
+            }
+            if ("Kawran Bazar".equalsIgnoreCase(b)) {
+                to = 7.5;
+            }
+            if ("Bangla Motor".equalsIgnoreCase(b)) {
+                to = 8.0;
+            }
+            if ("Mogbazar".equalsIgnoreCase(b)) {
+                to = 9.2;
+            }
+            if ("Mouchak".equalsIgnoreCase(b)) {
+                to = 10.2;
+            }
+            if ("Malibagh Railgate".equalsIgnoreCase(b)) {
+                to = 11.0;
+            }
+            if ("Hazipara".equalsIgnoreCase(b)) {
+                to = 11.7;
+            }
+            if ("Rampura Bazar".equalsIgnoreCase(b)) {
+                to = 12.7;
+            }
+            if ("Rampura Bridge".equalsIgnoreCase(b)) {
+                to = 13.2;
+            }
+            if ("Banasree".equalsIgnoreCase(b)) {
+                to = 15.5;
+            }
+            if ("Demra Staff Quarter".equalsIgnoreCase(b)) {
+                to = 23.5;
+            }
+
+        }
+        //busRoutNo3
+        if (routNo == 3) {
+            // from
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            // to
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo4
+        if (routNo == 4) {
+            // from
+            if ("Ghatar Char".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+            if ("Arshinagar".equalsIgnoreCase(a)) {
+                from = 1.9;
+            }
+            if ("Washpur".equalsIgnoreCase(a)) {
+                from = 2.4;
+            }
+            if ("Bosila".equalsIgnoreCase(a)) {
+                from = 4.3;
+            }
+            if ("Mohammadpur".equalsIgnoreCase(a)) {
+                from = 7.0;
+            }
+            if ("Asad Gate".equalsIgnoreCase(a)) {
+                from = 8.0;
+            }
+            if ("College Gate".equalsIgnoreCase(a)) {
+                from = 8.6;
+            }
+            if ("Shyamoli".equalsIgnoreCase(a)) {
+                from = 9.8;
+            }
+            if ("Kallyanpur".equalsIgnoreCase(a)) {
+                from = 10.13;
+            }
+            if ("Darussalam".equalsIgnoreCase(a)) {
+                from = 10.50;
+            }
+            if ("Technical".equalsIgnoreCase(a)) {
+                from = 11.05;
+            }
+            if ("Bangla College".equalsIgnoreCase(a)) {
+                from = 11.30;
+            }
+            if ("Ansar Camp".equalsIgnoreCase(a)) {
+                from = 12.0;
+            }
+            if ("Mirpur 1".equalsIgnoreCase(a)) {
+                from = 13.50;
+            }
+            if ("Mirpur 2".equalsIgnoreCase(a)) {
+                from = 14.80;
+            }
+            if ("Mirpur 10".equalsIgnoreCase(a)) {
+                from = 15.30;
+            }
+            if ("Mirpur 11".equalsIgnoreCase(a)) {
+                from = 16.30;
+            }
+            if ("Purobi".equalsIgnoreCase(a)) {
+                from = 16.80;
+            }
+            if ("Kalshi".equalsIgnoreCase(a)) {
+                from = 20.0;
+            }
+            if ("ECB Square".equalsIgnoreCase(a)) {
+                from = 22.0;
+            }
+            if ("MES".equalsIgnoreCase(a)) {
+                from = 24.0;
+            }
+            if ("Shewra".equalsIgnoreCase(a)) {
+                from = 24.40;
+            }
+            if ("Kuril Bishwa Road".equalsIgnoreCase(a)) {
+                from = 25.0;
+            }
+            if ("Khilkhet".equalsIgnoreCase(a)) {
+                from = 26.0;
+            }
+            if ("Airport".equalsIgnoreCase(a)) {
+                from = 28.4;
+            }
+            if ("Jashimuddin".equalsIgnoreCase(a)) {
+                from = 29.6;
+            }
+            if ("Rajlakshmi".equalsIgnoreCase(a)) {
+                from = 29.9;
+            }
+            if ("House Building".equalsIgnoreCase(a)) {
+                from = 30.2;
+            }
+            if ("Abdullahpur".equalsIgnoreCase(a)) {
+                from = 32.1;
+            }
+            if ("Kamarpara".equalsIgnoreCase(a)) {
+                from = 34.2;
+            }
+
+            // to
+            if ("Ghatar Char".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+            if ("Arshinagar".equalsIgnoreCase(b)) {
+                to = 1.9;
+            }
+            if ("Washpur".equalsIgnoreCase(b)) {
+                to = 2.4;
+            }
+            if ("Bosila".equalsIgnoreCase(b)) {
+                to = 4.3;
+            }
+            if ("Mohammadpur".equalsIgnoreCase(b)) {
+                to = 7.0;
+            }
+            if ("Asad Gate".equalsIgnoreCase(b)) {
+                to = 8.0;
+            }
+            if ("College Gate".equalsIgnoreCase(b)) {
+                to = 8.6;
+            }
+            if ("Shyamoli".equalsIgnoreCase(b)) {
+                to = 9.8;
+            }
+            if ("Kallyanpur".equalsIgnoreCase(b)) {
+                to = 10.13;
+            }
+            if ("Darussalam".equalsIgnoreCase(b)) {
+                to = 10.50;
+            }
+            if ("Technical".equalsIgnoreCase(b)) {
+                to = 11.05;
+            }
+            if ("Bangla College".equalsIgnoreCase(b)) {
+                to = 11.30;
+            }
+            if ("Ansar Camp".equalsIgnoreCase(b)) {
+                to = 12.0;
+            }
+            if ("Mirpur 1".equalsIgnoreCase(b)) {
+                to = 13.50;
+            }
+            if ("Mirpur 2".equalsIgnoreCase(b)) {
+                to = 14.80;
+            }
+            if ("Mirpur 10".equalsIgnoreCase(b)) {
+                to = 15.30;
+            }
+            if ("Mirpur 11".equalsIgnoreCase(b)) {
+                to = 16.30;
+            }
+            if ("Purobi".equalsIgnoreCase(b)) {
+                to = 16.80;
+            }
+            if ("Kalshi".equalsIgnoreCase(b)) {
+                to = 20.0;
+            }
+            if ("ECB Square".equalsIgnoreCase(b)) {
+                to = 22.0;
+            }
+            if ("MES".equalsIgnoreCase(b)) {
+                to = 24.0;
+            }
+            if ("Shewra".equalsIgnoreCase(b)) {
+                to = 24.40;
+            }
+            if ("Kuril Bishwa Road".equalsIgnoreCase(b)) {
+                to = 25.0;
+            }
+            if ("Khilkhet".equalsIgnoreCase(b)) {
+                to = 26.0;
+            }
+            if ("Airport".equalsIgnoreCase(b)) {
+                to = 28.4;
+            }
+            if ("Jashimuddin".equalsIgnoreCase(b)) {
+                to = 29.6;
+            }
+            if ("Rajlakshmi".equalsIgnoreCase(b)) {
+                to = 29.9;
+            }
+            if ("House Building".equalsIgnoreCase(b)) {
+                to = 30.2;
+            }
+            if ("Abdullahpur".equalsIgnoreCase(b)) {
+                to = 32.1;
+            }
+            if ("Kamarpara".equalsIgnoreCase(b)) {
+                to = 34.2;
+            }
+
+        }
+        //busRoutNo5
 
         if (from > to) {
             distance = from - to;
