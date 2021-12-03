@@ -71,6 +71,30 @@ public class BusRoutActivity extends AppCompatActivity {
                 rout.add(bus[i]);
             }
         }
+        if (busName.equalsIgnoreCase("Torongo_plus")) {
+            bus = Torongo_plus;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Romjan")) {
+            bus = Romjan;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Projapati")) {
+            bus = Projapati;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Paristhan")) {
+            bus = Paristhan;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
 
         return rout;
     }
@@ -118,6 +142,20 @@ public class BusRoutActivity extends AppCompatActivity {
         }
         if (busName.equalsIgnoreCase("Romjan")) {
             bus = Romjan;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Projapati")) {
+            bus = Projapati;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Paristhan")) {
+            bus = Paristhan;
             for (int i = 0; i < bus.length; i++) {
                 from = bus[0];
                 to = bus[bus.length - 1];
