@@ -71,7 +71,7 @@ public class BusRoutActivity extends AppCompatActivity {
                 rout.add(bus[i]);
             }
         }
-        if (busName.equalsIgnoreCase("Torongo_plus")) {
+        if (busName.equalsIgnoreCase("Torongo plus")) {
             bus = Torongo_plus;
             for (int i = 0; i < bus.length; i++) {
                 rout.add(bus[i]);
