@@ -255,5 +255,30 @@
         <item>Ghatar Char</item>
     </string-array>
 
+    <string-array name="Sadhin">
+        <!--bus stop names-->
+        <item>default</item>
+    </string-array>
+
+    <string-array name="Torongo_plus">
+        <!--bus stop names-->
+        <item>default</item>
+    </string-array>
+
+    <string-array name="Romjan">
+        <!--bus stop names-->
+        <item>default</item>
+    </string-array>
+
+    <string-array name="Projapati">
+        <!--bus stop names-->
+        <item>default</item>
+    </string-array>
+
+    <string-array name="Paristhan">
+        <!--bus stop names-->
+        <item>default</item>
+    </string-array>
+
 
 </resources>

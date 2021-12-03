@@ -46,10 +46,11 @@ public class BusRoutActivity extends AppCompatActivity {
 
         String[] Rojonigondha = getResources().getStringArray(R.array.Rojonigondha);
         String[] City_Link = getResources().getStringArray(R.array.City_Link);
-
-        String[] Sadhin = {"z", "m", "x", "n", "d"};
-        String[] Torongo_plus = {"a", "b", "c", "d"};
-        String[] Romjan = {"n", "b", "y", "x", "a"};
+        String[] Sadhin = getResources().getStringArray(R.array.Sadhin);
+        String[] Torongo_plus = getResources().getStringArray(R.array.Torongo_plus);
+        String[] Romjan = getResources().getStringArray(R.array.Romjan);
+        String[] Projapati = getResources().getStringArray(R.array.Projapati);
+        String[] Paristhan = getResources().getStringArray(R.array.Paristhan);
 
         List<String> rout = new ArrayList();
         if (busName.equalsIgnoreCase("Rojonigondha")) {
@@ -81,10 +82,11 @@ public class BusRoutActivity extends AppCompatActivity {
 
         String[] Rojonigondha = getResources().getStringArray(R.array.Rojonigondha);
         String[] City_Link = getResources().getStringArray(R.array.City_Link);
-
-        String[] Sadhin = {"z", "m", "x", "n", "d"};
-        String[] Torongo_plus = {"a", "b", "c", "d"};
-        String[] Romjan = {"n", "b", "y", "x", "a"};
+        String[] Sadhin = getResources().getStringArray(R.array.Sadhin);
+        String[] Torongo_plus = getResources().getStringArray(R.array.Torongo_plus);
+        String[] Romjan = getResources().getStringArray(R.array.Romjan);
+        String[] Projapati = getResources().getStringArray(R.array.Projapati);
+        String[] Paristhan = getResources().getStringArray(R.array.Paristhan);
 
         if (busName.equalsIgnoreCase("Rojonigondha")) {
             bus = Rojonigondha;
@@ -93,8 +95,29 @@ public class BusRoutActivity extends AppCompatActivity {
                 to = bus[bus.length - 1];
             }
         }
+        if (busName.equalsIgnoreCase("City Link")) {
+            bus = City_Link;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
         if (busName.equalsIgnoreCase("Sadhin")) {
             bus = Sadhin;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Torongo plus")) {
+            bus = Torongo_plus;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Romjan")) {
+            bus = Romjan;
             for (int i = 0; i < bus.length; i++) {
                 from = bus[0];
                 to = bus[bus.length - 1];

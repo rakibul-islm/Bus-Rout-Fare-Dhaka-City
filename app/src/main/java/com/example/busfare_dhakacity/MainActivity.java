@@ -101,6 +101,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (busList.get(i).equalsIgnoreCase("Rojonigondha")) {
                     routNo = 1;
                 }
+                if (busList.get(i).equalsIgnoreCase("Sadhin")) {
+                    routNo = 2;
+                }
+                if (busList.get(i).equalsIgnoreCase("Torongo_plus")) {
+                    routNo = 3;
+                }
+                if (busList.get(i).equalsIgnoreCase("Projapati")) {
+                    routNo = 4;
+                }
             }
 
             String distance = dis(from, to);
@@ -139,10 +148,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         String[] Rojonigondha = getResources().getStringArray(R.array.Rojonigondha);
         String[] City_Link = getResources().getStringArray(R.array.City_Link);
-
-        String[] Sadhin = {"z", "m", "x", "n", "d"};
-        String[] Torongo_plus = {"a", "b", "c", "d"};
-        String[] Romjan = {"n", "b", "y", "x", "a"};
+        String[] Sadhin = getResources().getStringArray(R.array.Sadhin);
+        String[] Torongo_plus = getResources().getStringArray(R.array.Torongo_plus);
+        String[] Romjan = getResources().getStringArray(R.array.Romjan);
+        String[] Projapati = getResources().getStringArray(R.array.Projapati);
+        String[] Paristhan = getResources().getStringArray(R.array.Paristhan);
 
         List<String> elementList = new ArrayList();
         boolean fcheck;
@@ -221,6 +231,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (fcheck && tcheck) {
             elementList.add("Romjan");
+        }
+
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Projapati;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Projapati");
+        }
+
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Paristhan;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Paristhan");
         }
 
         return elementList;
