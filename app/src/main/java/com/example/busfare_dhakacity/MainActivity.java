@@ -154,6 +154,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String[] Projapati = getResources().getStringArray(R.array.Projapati);
         String[] Paristhan = getResources().getStringArray(R.array.Paristhan);
 
+        String[] Achim_Paribahan = getResources().getStringArray(R.array.Achim_Paribahan);
+        String[] Ajmi = getResources().getStringArray(R.array.Ajmi);
+        String[] Akik = getResources().getStringArray(R.array.Akik);
+        String[] Alif_Bus = getResources().getStringArray(R.array.Alif_Bus);
+        String[] Arnob_Bus = getResources().getStringArray(R.array.Arnob_Bus);
+        String[] Active_Paribahan = getResources().getStringArray(R.array.Active_Paribahan);
+        String[] Agradut = getResources().getStringArray(R.array.Agradut);
+        String[] Airport_Bangabandhu_Avenue = getResources().getStringArray(R.array.Airport_Bangabandhu_Avenue);
+        String[] Akash = getResources().getStringArray(R.array.Akash);
+        String[] Al_Madina_Plus = getResources().getStringArray(R.array.Al_Madina_Plus);
+        String[] Al_Makka = getResources().getStringArray(R.array.Al_Makka);
+        String[] Anabil_Super = getResources().getStringArray(R.array.Anabil_Super);
+        String[] Ashirbad_Pahibahan = getResources().getStringArray(R.array.Ashirbad_Pahibahan);
+        String[] Ashulia_Classic = getResources().getStringArray(R.array.Ashulia_Classic);
+        String[] Asmani = getResources().getStringArray(R.array.Asmani);
+        String[] Ayat = getResources().getStringArray(R.array.Ayat);
+        String[] Azmeri_Glory = getResources().getStringArray(R.array.Azmeri_Glory);
+        String[] Bahon = getResources().getStringArray(R.array.Bahon);
+        String[] Baishakhi = getResources().getStringArray(R.array.Baishakhi);
+        String[] Balaka = getResources().getStringArray(R.array.Balaka);
+        String[] Basumati_Transport = getResources().getStringArray(R.array.Basumati_Transport);
+        String[] Basumati = getResources().getStringArray(R.array.Basumati);
+
         List<String> elementList = new ArrayList();
         boolean fcheck;
         boolean tcheck;
@@ -263,16 +286,328 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             elementList.add("Paristhan");
         }
 
+
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Alif_Bus;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Alif");
+        }
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Arnob_Bus;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Arnob");
+        }
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Akik;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Akik");
+        }
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Akash;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Akash");
+        }
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Asmani;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Asmani");
+        }
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Achim_Paribahan;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Achim Paribahan");
+        }
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Active_Paribahan;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Active Paribahan");
+        }
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Agradut;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Agradut");
+        }
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Airport_Bangabandhu_Avenue;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Airport Bangabandhu Avenue");
+        }
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Ajmi;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Ajmi");
+        }
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Al_Madina_Plus;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Al Madina Plus");
+        }//bus
+        fcheck = false;
+        tcheck = false;
+        bus = Al_Makka;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Al Makka");
+        }//bus
+        fcheck = false;
+        tcheck = false;
+        bus = Anabil_Super;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Anabil Super");
+        }
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Ashirbad_Pahibahan;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Ashirbad Pahibahan");
+        }
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Ashulia_Classic;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Ashulia Classic");
+        }//bus
+        fcheck = false;
+        tcheck = false;
+        bus = Ayat;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Ayat");
+        }//bus
+        fcheck = false;
+        tcheck = false;
+        bus = Azmeri_Glory;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Azmeri Glory");
+        }//bus
+        fcheck = false;
+        tcheck = false;
+        bus = Bahon;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Bahon");
+        }//bus
+        fcheck = false;
+        tcheck = false;
+        bus = Baishakhi;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Baishakhi");
+        }
+        //bus
+        fcheck = false;
+        tcheck = false;
+        bus = Balaka;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Balaka");
+        }//bus
+        fcheck = false;
+        tcheck = false;
+        bus = Basumati;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Basumati");
+        }//bus
+        fcheck = false;
+        tcheck = false;
+        bus = Basumati_Transport;
+        for (int i = 0; i < bus.length; i++) {
+            if (bus[i].equalsIgnoreCase(from)) {
+                fcheck = true;
+            } else if (bus[i].equalsIgnoreCase(to)) {
+                tcheck = true;
+            }
+        }
+        if (fcheck && tcheck) {
+            elementList.add("Basumati Transport");
+        }
+
+
         return elementList;
 
     }
+
+
+
+
+
+
+
+
+    // bus fare calculation
 
     public int busRent(String a, String b) {
         double from = 0.0;
         double to = 0.0;
         double distance;
 
-        //busRoutNo
+        //busRoutNo1
         if (routNo == 1) {
             if ("Chittagong Road".equalsIgnoreCase(a)) {
                 from = 0.0;
@@ -426,7 +761,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 to = 26.0;
             }
         }
-        //busRoutNo
+
+        //busRoutNo2
+        if (routNo == 2) {
+            if ("Chittagong Road".equalsIgnoreCase(a)) {
+                from = 0.0;
+            }
+
+
+            if ("Chittagong Road".equalsIgnoreCase(b)) {
+                to = 0.0;
+            }
+
+        }
+        //busRoutNo3
 
 
         int rent;

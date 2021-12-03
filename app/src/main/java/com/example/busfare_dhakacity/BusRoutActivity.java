@@ -54,6 +54,29 @@ public class BusRoutActivity extends AppCompatActivity {
         String[] Projapati = getResources().getStringArray(R.array.Projapati);
         String[] Paristhan = getResources().getStringArray(R.array.Paristhan);
 
+        String[] Achim_Paribahan = getResources().getStringArray(R.array.Achim_Paribahan);
+        String[] Ajmi = getResources().getStringArray(R.array.Ajmi);
+        String[] Akik = getResources().getStringArray(R.array.Akik);
+        String[] Alif_Bus = getResources().getStringArray(R.array.Alif_Bus);
+        String[] Arnob_Bus = getResources().getStringArray(R.array.Arnob_Bus);
+        String[] Active_Paribahan = getResources().getStringArray(R.array.Active_Paribahan);
+        String[] Agradut = getResources().getStringArray(R.array.Agradut);
+        String[] Airport_Bangabandhu_Avenue = getResources().getStringArray(R.array.Airport_Bangabandhu_Avenue);
+        String[] Akash = getResources().getStringArray(R.array.Akash);
+        String[] Al_Madina_Plus = getResources().getStringArray(R.array.Al_Madina_Plus);
+        String[] Al_Makka = getResources().getStringArray(R.array.Al_Makka);
+        String[] Anabil_Super = getResources().getStringArray(R.array.Anabil_Super);
+        String[] Ashirbad_Pahibahan = getResources().getStringArray(R.array.Ashirbad_Pahibahan);
+        String[] Ashulia_Classic = getResources().getStringArray(R.array.Ashulia_Classic);
+        String[] Asmani = getResources().getStringArray(R.array.Asmani);
+        String[] Ayat = getResources().getStringArray(R.array.Ayat);
+        String[] Azmeri_Glory = getResources().getStringArray(R.array.Azmeri_Glory);
+        String[] Bahon = getResources().getStringArray(R.array.Bahon);
+        String[] Baishakhi = getResources().getStringArray(R.array.Baishakhi);
+        String[] Balaka = getResources().getStringArray(R.array.Balaka);
+        String[] Basumati_Transport = getResources().getStringArray(R.array.Basumati_Transport);
+        String[] Basumati = getResources().getStringArray(R.array.Basumati);
+
         List<String> rout = new ArrayList();
         if (busName.equalsIgnoreCase("Rojonigondha")) {
             bus = Rojonigondha;
@@ -98,6 +121,139 @@ public class BusRoutActivity extends AppCompatActivity {
             }
         }
 
+        if (busName.equalsIgnoreCase("Alif")) {
+            bus = Alif_Bus;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Arnob")) {
+            bus = Arnob_Bus;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Agradut")) {
+            bus = Agradut;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Ajmi")) {
+            bus = Ajmi;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Akik")) {
+            bus = Akik;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Achim Paribahan")) {
+            bus = Achim_Paribahan;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Active Paribahan")) {
+            bus = Active_Paribahan;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Airport Bangabandhu Avenue")) {
+            bus = Airport_Bangabandhu_Avenue;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Akash")) {
+            bus = Akash;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Al Madina Plus")) {
+            bus = Al_Madina_Plus;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Al Makka")) {
+            bus = Al_Makka;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Anabil Super")) {
+            bus = Anabil_Super;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Ashirbad Pahibahan")) {
+            bus = Ashirbad_Pahibahan;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Ashulia Classic")) {
+            bus = Ashulia_Classic;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Asmani")) {
+            bus = Asmani;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Ayat")) {
+            bus = Ayat;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Azmeri Glory")) {
+            bus = Azmeri_Glory;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Bahon")) {
+            bus = Bahon;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Baishakhi")) {
+            bus = Baishakhi;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Balaka")) {
+            bus = Balaka;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Basumati")) {
+            bus = Basumati;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+        if (busName.equalsIgnoreCase("Basumati Transport")) {
+            bus = Basumati_Transport;
+            for (int i = 0; i < bus.length; i++) {
+                rout.add(bus[i]);
+            }
+        }
+
         return rout;
     }
 
@@ -113,6 +269,29 @@ public class BusRoutActivity extends AppCompatActivity {
         String[] Romjan = getResources().getStringArray(R.array.Romjan);
         String[] Projapati = getResources().getStringArray(R.array.Projapati);
         String[] Paristhan = getResources().getStringArray(R.array.Paristhan);
+
+        String[] Achim_Paribahan = getResources().getStringArray(R.array.Achim_Paribahan);
+        String[] Ajmi = getResources().getStringArray(R.array.Ajmi);
+        String[] Akik = getResources().getStringArray(R.array.Akik);
+        String[] Alif_Bus = getResources().getStringArray(R.array.Alif_Bus);
+        String[] Arnob_Bus = getResources().getStringArray(R.array.Arnob_Bus);
+        String[] Active_Paribahan = getResources().getStringArray(R.array.Active_Paribahan);
+        String[] Agradut = getResources().getStringArray(R.array.Agradut);
+        String[] Airport_Bangabandhu_Avenue = getResources().getStringArray(R.array.Airport_Bangabandhu_Avenue);
+        String[] Akash = getResources().getStringArray(R.array.Akash);
+        String[] Al_Madina_Plus = getResources().getStringArray(R.array.Al_Madina_Plus);
+        String[] Al_Makka = getResources().getStringArray(R.array.Al_Makka);
+        String[] Anabil_Super = getResources().getStringArray(R.array.Anabil_Super);
+        String[] Ashirbad_Pahibahan = getResources().getStringArray(R.array.Ashirbad_Pahibahan);
+        String[] Ashulia_Classic = getResources().getStringArray(R.array.Ashulia_Classic);
+        String[] Asmani = getResources().getStringArray(R.array.Asmani);
+        String[] Ayat = getResources().getStringArray(R.array.Ayat);
+        String[] Azmeri_Glory = getResources().getStringArray(R.array.Azmeri_Glory);
+        String[] Bahon = getResources().getStringArray(R.array.Bahon);
+        String[] Baishakhi = getResources().getStringArray(R.array.Baishakhi);
+        String[] Balaka = getResources().getStringArray(R.array.Balaka);
+        String[] Basumati_Transport = getResources().getStringArray(R.array.Basumati_Transport);
+        String[] Basumati = getResources().getStringArray(R.array.Basumati);
 
         if (busName.equalsIgnoreCase("Rojonigondha")) {
             bus = Rojonigondha;
@@ -158,6 +337,161 @@ public class BusRoutActivity extends AppCompatActivity {
         }
         if (busName.equalsIgnoreCase("Paristhan")) {
             bus = Paristhan;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+
+        if (busName.equalsIgnoreCase("Alif")) {
+            bus = Alif_Bus;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Arnob")) {
+            bus = Arnob_Bus;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Agradut")) {
+            bus = Agradut;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Ajmi")) {
+            bus = Ajmi;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Akik")) {
+            bus = Akik;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Achim Paribahan")) {
+            bus = Achim_Paribahan;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Active Paribahan")) {
+            bus = Active_Paribahan;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Airport Bangabandhu Avenue")) {
+            bus = Airport_Bangabandhu_Avenue;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Akash")) {
+            bus = Akash;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Al Madina Plus")) {
+            bus = Al_Madina_Plus;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Al Makka")) {
+            bus = Al_Makka;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Anabil Super")) {
+            bus = Anabil_Super;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Ashirbad Pahibahan")) {
+            bus = Ashirbad_Pahibahan;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Ashulia Classic")) {
+            bus = Ashulia_Classic;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Asmani")) {
+            bus = Asmani;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Ayat")) {
+            bus = Ayat;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Azmeri Glory")) {
+            bus = Azmeri_Glory;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Bahon")) {
+            bus = Bahon;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Baishakhi")) {
+            bus = Baishakhi;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Balaka")) {
+            bus = Balaka;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Basumati")) {
+            bus = Basumati;
+            for (int i = 0; i < bus.length; i++) {
+                from = bus[0];
+                to = bus[bus.length - 1];
+            }
+        }
+        if (busName.equalsIgnoreCase("Basumati Transport")) {
+            bus = Basumati_Transport;
             for (int i = 0; i < bus.length; i++) {
                 from = bus[0];
                 to = bus[bus.length - 1];
