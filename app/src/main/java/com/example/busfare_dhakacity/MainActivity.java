@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selectedFromList = (String) (listView.getItemAtPosition(position));
-                Toast.makeText(getApplicationContext(), selectedFromList, Toast.LENGTH_SHORT).show();
+                // Toast.makeText(getApplicationContext(), selectedFromList, Toast.LENGTH_SHORT).show();
 
 
                 Intent intent = new Intent(view.getContext(), BusRoutActivity.class);
@@ -98,85 +98,89 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             busList = bus(from, to);
             for (int i = 0; i < busList.size(); i++) {
-                if (busList.get(i).equalsIgnoreCase("Rojonigondha")) {
-                    routNo = 1;
-                }
-                if (busList.get(i).equalsIgnoreCase("Sadhin")) {
-                    routNo = 2;
-                }
-                if (busList.get(i).equalsIgnoreCase("Torongo_plus")) {
-                    routNo = 3;
-                }
-                if (busList.get(i).equalsIgnoreCase("Projapati")) {
-                    routNo = 4;
+
+                switch (busList.get(i)) {
+                    case "Rojonigondha":
+                        routNo = 1;
+                        break;
+                    case "Sadhin":
+                        routNo = 2;
+                        break;
+//                    case "Torongo Plus":
+//                        routNo = 3;
+//                        break;
+                    case "Projapati":
+                        routNo = 4;
+                        break;
+//                    case "Achim Paribahan":
+//                        routNo = 5;
+//                        break;
+//                    case "Active Paribahan":
+//                        routNo = 6;
+//                        break;
+//                    case "Agradut":
+//                        routNo = 7;
+//                        break;
+//                    case "Airport Bangabandhu Avenue":
+//                        routNo = 8;
+//                        break;
+//                    case "Azmeri Glory":
+//                        routNo = 9;
+//                        break;
+//                    case "Ajmi":
+//                        routNo = 10;
+//                        break;
+//                    case "Akash":
+//                        routNo = 11;
+//                        break;
+//                    case "Akik":
+//                        routNo = 12;
+//                        break;
+//                    case "Al Makka":
+//                        routNo = 13;
+//                        break;
+//                    case "Al Madina Plus":
+//                        routNo = 14;
+//                        break;
+//                    case "Alif":
+//                        routNo = 15;
+//                        break;
+//                    case "Anabil Super":
+//                        routNo = 16;
+//                        break;
+//                    case "Arnob":
+//                        routNo = 17;
+//                        break;
+//                    case "Ashirbad Pahibahan":
+//                        routNo = 18;
+//                        break;
+//                    case "Ashulia Classic":
+//                        routNo = 19;
+//                        break;
+//                    case "Asmani":
+//                        routNo = 20;
+//                        break;
+//                    case "Ayat":
+//                        routNo = 21;
+//                        break;
+//                    case "Bahon":
+//                        routNo = 22;
+//                        break;
+//                    case "Baishakhi":
+//                        routNo = 23;
+//                        break;
+//                    case "Balaka":
+//                        routNo = 24;
+//                        break;
+//                    case "Basumati":
+//                        routNo = 25;
+//                        break;
+//                    case "Basumati Transport":
+//                        routNo = 26;
+//                        break;
+
                 }
 
-                if (busList.get(i).equalsIgnoreCase("Achim Paribahan")) {
-                    routNo = 5;
-                }
-                if (busList.get(i).equalsIgnoreCase("Active Paribahan")) {
-                    routNo = 6;
-                }
-                if (busList.get(i).equalsIgnoreCase("Agradut")) {
-                    routNo = 7;
-                }
-                if (busList.get(i).equalsIgnoreCase("Airport Bangabandhu Avenue")) {
-                    routNo = 8;
-                }
-                if (busList.get(i).equalsIgnoreCase("Azmeri Glory")) {
-                    routNo = 9;
-                }
-                if (busList.get(i).equalsIgnoreCase("Ajmi")) {
-                    routNo = 10;
-                }
-                if (busList.get(i).equalsIgnoreCase("Akash")) {
-                    routNo = 11;
-                }
-                if (busList.get(i).equalsIgnoreCase("Akik")) {
-                    routNo = 12;
-                }
-                if (busList.get(i).equalsIgnoreCase("Al Makka")) {
-                    routNo = 13;
-                }
-                if (busList.get(i).equalsIgnoreCase("Al Madina Plus")) {
-                    routNo = 14;
-                }
-                if (busList.get(i).equalsIgnoreCase("Alif")) {
-                    routNo = 15;
-                }
-                if (busList.get(i).equalsIgnoreCase("Anabil Super")) {
-                    routNo = 16;
-                }
-                if (busList.get(i).equalsIgnoreCase("Arnob")) {
-                    routNo = 17;
-                }
-                if (busList.get(i).equalsIgnoreCase("Ashirbad Pahibahan")) {
-                    routNo = 18;
-                }
-                if (busList.get(i).equalsIgnoreCase("Ashulia Classic")) {
-                    routNo = 19;
-                }
-                if (busList.get(i).equalsIgnoreCase("Asmani")) {
-                    routNo = 20;
-                }
-                if (busList.get(i).equalsIgnoreCase("Ayat")) {
-                    routNo = 21;
-                }
-                if (busList.get(i).equalsIgnoreCase("Bahon")) {
-                    routNo = 22;
-                }
-                if (busList.get(i).equalsIgnoreCase("Baishakhi")) {
-                    routNo = 23;
-                }
-                if (busList.get(i).equalsIgnoreCase("Balaka")) {
-                    routNo = 24;
-                }
-                if (busList.get(i).equalsIgnoreCase("Basumati")) {
-                    routNo = 25;
-                }
-                if (busList.get(i).equalsIgnoreCase("Basumati Transport")) {
-                    routNo = 26;
-                }
             }
 
             String distance = dis(from, to);
@@ -197,7 +201,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // TODO: handle exception
             }
 
-            Toast.makeText(getApplicationContext(), searchText, Toast.LENGTH_SHORT).show();
+            // Toast.makeText(getApplicationContext(), searchText, Toast.LENGTH_SHORT).show();
         }
 
         if (v.getId() == R.id.allBusId) {
@@ -919,20 +923,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
         }
-        //busRoutNo-3 Torongo Plus
-        if (routNo == 3) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
+//        //busRoutNo-3 Torongo Plus
+//        if (routNo == 3) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
         //busRoutNo-4 Projapoti
         if (routNo == 4) {
             // from
@@ -1120,320 +1124,316 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
         }
-        //busRoutNo-5 Achim Paribahan
-        if (routNo == 5) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
+//        //busRoutNo-5 Achim Paribahan
+//        if (routNo == 5) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-6 Active Paribahan
+//        if (routNo == 6) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-7 Agradut
+//        if (routNo == 7) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-8 Airport Bangabandhu Avenue
+//        if (routNo == 8) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-9 Azmeri Glory
+//        if (routNo == 9) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-10 Ajmi
+//        if (routNo == 10) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-11 Akash
+//        if (routNo == 11) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-12 Akik
+//        if (routNo == 12) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-13 Al Makka
+//        if (routNo == 13) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-14 Al Madina Plus
+//        if (routNo == 14) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-15 Alif
+//        if (routNo == 15) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-16 Anabil Super
+//        if (routNo == 16) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-17 Arnob
+//        if (routNo == 17) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-18 Ashirbad Pahibahan
+//        if (routNo == 18) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-19 Ashulia Classic
+//        if (routNo == 19) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-20 Asmani
+//        if (routNo == 20) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-21 Ayat
+//        if (routNo == 21) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-22 Bahon
+//        if (routNo == 22) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-23 Baishakhi
+//        if (routNo == 23) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-24 Balaka
+//        if (routNo == 24) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-25 Basumati
+//        if (routNo == 25) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo-26 Basumati Transport
+//        if (routNo == 26) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
+//        //busRoutNo
 
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-6 Active Paribahan
-        if (routNo == 6) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-7 Agradut
-        if (routNo == 7) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-8 Airport Bangabandhu Avenue
-        if (routNo == 8) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-9 Azmeri Glory
-        if (routNo == 9) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-10 Ajmi
-        if (routNo == 10) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-11 Akash
-        if (routNo == 11) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-12 Akik
-        if (routNo == 12) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-13 Al Makka
-        if (routNo == 13) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-14 Al Madina Plus
-        if (routNo == 14) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-15 Alif
-        if (routNo == 15) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-16 Anabil Super
-        if (routNo == 16) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-17 Arnob
-        if (routNo == 17) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-18 Ashirbad Pahibahan
-        if (routNo == 18) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-19 Ashulia Classic
-        if (routNo == 19) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-20 Asmani
-        if (routNo == 20) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-21 Ayat
-        if (routNo == 21) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-22 Bahon
-        if (routNo == 22) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-23 Baishakhi
-        if (routNo == 23) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-24 Balaka
-        if (routNo == 24) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-25 Basumati
-        if (routNo == 25) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo-26 Basumati Transport
-        if (routNo == 26) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
-        //busRoutNo
-
-
-
-
-        
 
         int rent;
 
@@ -1708,20 +1708,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
         }
-        //busRoutNo3
-        if (routNo == 3) {
-            // from
-            if ("Chittagong Road".equalsIgnoreCase(a)) {
-                from = 0.0;
-            }
-
-
-            // to
-            if ("Chittagong Road".equalsIgnoreCase(b)) {
-                to = 0.0;
-            }
-
-        }
+//        //busRoutNo3
+//        if (routNo == 3) {
+//            // from
+//            if ("Chittagong Road".equalsIgnoreCase(a)) {
+//                from = 0.0;
+//            }
+//
+//
+//            // to
+//            if ("Chittagong Road".equalsIgnoreCase(b)) {
+//                to = 0.0;
+//            }
+//
+//        }
         //busRoutNo4
         if (routNo == 4) {
             // from
